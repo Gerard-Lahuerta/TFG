@@ -1,6 +1,5 @@
 #include "MLP.h"
 
-
 Neuron create_neuron(unsigned num_inputs) {
     Neuron neuron;
     neuron.weights = (double *)malloc(num_inputs * sizeof(double));
