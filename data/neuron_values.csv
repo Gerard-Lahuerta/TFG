@@ -1,6 +1,6 @@
 Layer,Neuron,Weights,Bias
 Input,0,-0.211234,0.680375
-Hidden,0,-nan,-nan
-Hidden,1,-nan,-nan
-Hidden,2,-nan,-nan
-Output,0,-nan,-nan,-nan,-nan
+Hidden,0,0.606181,0.335676
+Hidden,1,-0.698445,0.895704
+Hidden,2,0.742707,-0.659128
+Output,0,0.927685,-0.680965,1.310555,0.023864

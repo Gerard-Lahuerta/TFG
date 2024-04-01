@@ -36,7 +36,7 @@ void feedforward(NeuralNetwork *network, double input) {
             sum += neuron->weights[j] * network->hidden_layer.neurons[j].output;
         }
 
-        neuron->output = sigmoid(sum);
+        neuron->output = sum;
     }
 }
 
@@ -48,7 +48,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
     for (i = 0; i < OUTPUT_SIZE; i++) {
         Neuron *neuron = &network->output_layer.neurons[i];
         error = expected_output - neuron->output;
-        neuron->delta = error * sigmoid_derivative(neuron->output);
+        neuron->delta = error ; 
     }
 
     // Calculate deltas for the hidden layer
