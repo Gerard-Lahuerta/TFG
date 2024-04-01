@@ -1,5 +1,31 @@
 #include "load.h"
 
+double** read_dataset(char* file_name, int* data_size){
+    unsigned rows = 0, i;
+    int character;
+
+    FILE* file = fopen(file_name, "r");
+    if (file == NULL) { printf("Error file not found.\n"); return NULL;}
+
+    while ( (character = fgetc(file)) != EOF){ if (character == '\n') rows++; }
+    rows--;
+
+    double** dataset = (double**) malloc(rows*sizeof(double*));
+
+    fseek(file, 0, SEEK_SET);
+
+    while ( fgetc(file) != '\n');
+
+    for (i = 0; i < rows; i++){
+        dataset[i] = (double*) malloc(2*sizeof(double));
+        fscanf(file,"%lf;%lf\n", &dataset[i][0], &dataset[i][1]);
+    }
+    
+    fclose(file);
+    *data_size = rows;
+    return dataset;
+}
+
 void save_neurons_to_csv(const char *filename, NeuralNetwork *network) {
     unsigned i,j;
 

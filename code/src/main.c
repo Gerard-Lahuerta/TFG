@@ -9,23 +9,27 @@ int main() {
     NeuralNetwork network = create_network();
 
     // load dataset
-    double dataset[DATA_SIZE][2] = { {1,1}, {4,2}}; 
+    char* dataset_file = "data/roots.csv";
+    int index, i, data_size = 0;
+    double** dataset = read_dataset(dataset_file, &data_size);
+
 
     // Variables
-    unsigned epoch, i;
+    unsigned epoch;
     double input, expected_output;
     
 
     for (epoch = 0; epoch < EPOCHS; epoch++) {
-        for (i = 0; i < DATA_SIZE; i++) {
-            input = dataset[i][0];
-            expected_output = dataset[i][1];
+        for (i = 0; i < data_size; i++) {
+            index = rand() % data_size;
+            input = dataset[index][0];
+            expected_output = dataset[index][1];
             feedforward(&network, input);
             backpropagation(&network, expected_output);
         }
     }
 
-    input = 0.5; // to be changed
+    input = 1; // to be changed
     feedforward(&network, input);
     printf("Output: %lf\n", network.output_layer.neurons[0].output);
 

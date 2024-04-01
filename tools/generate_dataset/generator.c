@@ -25,7 +25,6 @@ int main() {
     }
 
     fclose(file);
-
     printf("dataset generated succesfully\n");
 
     return 0;
