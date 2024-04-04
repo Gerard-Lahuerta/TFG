@@ -27,7 +27,9 @@ Layer create_layer(unsigned num_neurons, unsigned num_inputs_per_neuron) {
 NeuralNetwork create_network() {
     NeuralNetwork network;
     network.input_layer = create_layer(INPUT_SIZE, 1);
-    network.hidden_layer = create_layer(HIDDEN_SIZE, INPUT_SIZE);
+    network.hidden_layer = (Layer*) malloc(N_HIDDEN * sizeof(Layer));
+    network.hidden_layer[0] = create_layer(HIDDEN_SIZE, INPUT_SIZE);
+    for (unsigned i = 1; i < N_HIDDEN; i++) network.hidden_layer[i] = create_layer(HIDDEN_SIZE, HIDDEN_SIZE);
     network.output_layer = create_layer(OUTPUT_SIZE, HIDDEN_SIZE);
     return network;
 }

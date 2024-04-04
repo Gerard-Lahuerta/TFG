@@ -19,7 +19,7 @@ typedef struct {
 
 typedef struct {
     Layer input_layer;
-    Layer hidden_layer;
+    Layer *hidden_layer;
     Layer output_layer;
 } NeuralNetwork;
 
