@@ -60,7 +60,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
             Neuron *neuron = &network->hidden_layer[k-1].neurons[i];
             error = 0;
 
-            if (k == N_HIDDEN - 1) { 
+            if (k == N_HIDDEN) { 
                 for (j = 0; j < OUTPUT_SIZE; j++) {
                     error += network->output_layer.neurons[j].weights[i] * network->output_layer.neurons[j].delta;
                 }
