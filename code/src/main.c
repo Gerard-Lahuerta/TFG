@@ -36,7 +36,7 @@ int main() {
     save_neurons_to_csv("./data/neuron_values.csv", &network);
 
     free(network.input_layer.neurons);
-    free(network.hidden_layer.neurons);
+    for (i = 0; i < N_HIDDEN; i++) free(network.hidden_layer[i].neurons);
     free(network.output_layer.neurons);
 
     return 0;

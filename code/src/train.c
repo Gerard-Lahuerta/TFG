@@ -55,9 +55,9 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
     }
 
     // Calculate deltas for the hidden layer
-    for (k = N_HIDDEN - 1; k >= 0; k--) {
+    for (k = N_HIDDEN; k > 0; k--) {
         for (i = 0; i < HIDDEN_SIZE; i++) {
-            Neuron *neuron = &network->hidden_layer[k].neurons[i];
+            Neuron *neuron = &network->hidden_layer[k-1].neurons[i];
             error = 0;
 
             if (k == N_HIDDEN - 1) { 
@@ -67,7 +67,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
             } 
             else { 
                 for (j = 0; j < HIDDEN_SIZE; j++) {
-                    error += network->hidden_layer[k+1].neurons[j].weights[i] * network->hidden_layer[k+1].neurons[j].delta;
+                    error += network->hidden_layer[k].neurons[j].weights[i] * network->hidden_layer[k].neurons[j].delta;
                 }
             }
 
