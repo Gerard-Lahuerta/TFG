@@ -43,7 +43,7 @@ void feedforward(NeuralNetwork *network, double input) {
     }
 }
 
-void backpropagation(NeuralNetwork *network, double expected_output) {
+void backpropagation(NeuralNetwork *network, double expected_output, CostFunction loss) {
     unsigned i,j,k;
     double error;
 
@@ -91,7 +91,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
         for (i = 0; i < HIDDEN_SIZE; i++) {
             Neuron *neuron = &network->hidden_layer[k].neurons[i];
 
-            for (int j = 0; j < (k == 0 ? INPUT_SIZE : HIDDEN_SIZE); j++) {
+            for (j = 0; j < (k == 0 ? INPUT_SIZE : HIDDEN_SIZE); j++) {
                 if (!k) neuron->weights[j] += LEARNING_RATE * neuron->delta * network->input_layer.neurons[j].output;
                 else neuron->weights[j] += LEARNING_RATE * neuron->delta * network->hidden_layer[k - 1].neurons[j].output;
             }

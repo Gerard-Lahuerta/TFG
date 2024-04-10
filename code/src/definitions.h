@@ -9,3 +9,5 @@
 #define N_HIDDEN 5
 #define LEARNING_RATE 0.1
 #define EPOCHS 1000
+
+typedef double (*CostFunction)(double expected_output, double actual_output);

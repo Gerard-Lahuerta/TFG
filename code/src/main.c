@@ -1,10 +1,14 @@
 #include "load.h"
 #include "train.h"
 #include "MLP.h"
+#include "costFunctions.h"
 #include "definitions.h"
 
 int main() {
     srand(0); 
+
+    CostFunction loss = &quadratic_cost;
+    CostFunction loss_derivative = &quadratic_cost_derivative;
 
     NeuralNetwork network = create_network();
 
@@ -25,7 +29,7 @@ int main() {
             input = dataset[index][0];
             expected_output = dataset[index][1];
             feedforward(&network, input);
-            backpropagation(&network, expected_output);
+            backpropagation(&network, expected_output, loss_derivative);
         }
     }
 
