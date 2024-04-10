@@ -10,7 +10,7 @@ int main() {
     CostFunction loss = &quadratic_cost;
     CostFunction loss_derivative = &quadratic_cost_derivative;
 
-    NeuralNetwork network = create_network();
+    NeuralNetwork network = create_network(loss_derivative);
 
     // load dataset
     char* dataset_file = "data/roots.csv";
@@ -29,7 +29,7 @@ int main() {
             input = dataset[index][0];
             expected_output = dataset[index][1];
             feedforward(&network, input);
-            backpropagation(&network, expected_output, loss_derivative);
+            backpropagation(&network, expected_output);
         }
     }
 

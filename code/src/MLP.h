@@ -21,10 +21,10 @@ typedef struct {
     Layer input_layer;
     Layer *hidden_layer;
     Layer output_layer;
+    CostFunction loss_derivative;
 } NeuralNetwork;
 
 Neuron create_neuron(unsigned num_inputs);
 Layer create_layer(unsigned num_neurons, unsigned num_inputs_per_neuron);
-NeuralNetwork create_network();
-
+NeuralNetwork create_network(CostFunction loss_derivative);
 #endif

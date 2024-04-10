@@ -43,21 +43,19 @@ void feedforward(NeuralNetwork *network, double input) {
     }
 }
 
-void backpropagation(NeuralNetwork *network, double expected_output, CostFunction loss) {
+void backpropagation(NeuralNetwork *network, double expected_output) {
     unsigned i,j,k;
     double error;
+    CostFunction loss_derivative = network->loss_derivative;
 
     // Calculate deltas for the output layer
     for (i = 0; i < OUTPUT_SIZE; i++) {
-        Neuron *neuron = &network->output_layer.neurons[i];
-        error = expected_output - neuron->output;
-        neuron->delta = error ; 
+        network->output_layer.neurons[i].delta = loss_derivative(expected_output, network->output_layer.neurons[i].output); 
     }
 
     // Calculate deltas for the hidden layer
     for (k = N_HIDDEN; k > 0; k--) {
         for (i = 0; i < HIDDEN_SIZE; i++) {
-            Neuron *neuron = &network->hidden_layer[k-1].neurons[i];
             error = 0;
 
             if (k == N_HIDDEN) { 
@@ -71,7 +69,7 @@ void backpropagation(NeuralNetwork *network, double expected_output, CostFunctio
                 }
             }
 
-            neuron->delta = error * sigmoid_derivative(neuron->output);
+            network->hidden_layer[k-1].neurons[i].delta = error * sigmoid_derivative(network->hidden_layer[k-1].neurons[i].output);
         }
     }
 

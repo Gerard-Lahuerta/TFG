@@ -7,5 +7,5 @@ double sigmoid(double x);
 double sigmoid_derivative(double x);
 
 void feedforward(NeuralNetwork *network, double input);
-void backpropagation(NeuralNetwork *network, double expected_output, CostFunction loss);
+void backpropagation(NeuralNetwork *network, double expected_output);
 

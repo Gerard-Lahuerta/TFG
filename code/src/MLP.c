@@ -24,8 +24,9 @@ Layer create_layer(unsigned num_neurons, unsigned num_inputs_per_neuron) {
     return layer;
 }
 
-NeuralNetwork create_network() {
+NeuralNetwork create_network(CostFunction loss_derivative) {
     NeuralNetwork network;
+    network.loss_derivative = loss_derivative;
     network.input_layer = create_layer(INPUT_SIZE, 1);
     network.hidden_layer = (Layer*) malloc(N_HIDDEN * sizeof(Layer));
     for (unsigned i = 0; i < N_HIDDEN; i++){
