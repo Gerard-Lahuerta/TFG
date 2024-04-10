@@ -1,7 +1,7 @@
 #include "load.h"
 #include "train.h"
 #include "MLP.h"
-#include "costFunctions.h"
+#include "utils.h"
 #include "definitions.h"
 
 int main() {
@@ -9,8 +9,10 @@ int main() {
 
     CostFunction loss = &quadratic_cost;
     CostFunction loss_derivative = &quadratic_cost_derivative;
+    ActivationFunction activation_function = &sigmoid;
+    ActivationFunction activation_function_derivative = &sigmoid_derivative;
 
-    NeuralNetwork network = create_network(loss_derivative);
+    NeuralNetwork network = create_network(loss_derivative, activation_function, activation_function_derivative);
 
     // load dataset
     char* dataset_file = "data/roots.csv";
@@ -31,6 +33,9 @@ int main() {
             feedforward(&network, input);
             backpropagation(&network, expected_output);
         }
+        index = rand() % data_size;
+        feedforward(&network, input);
+        printf("LOSS - epoch %d|%d --> %lf\n",epoch+1, EPOCHS, loss(expected_output, network.output_layer.neurons[0].output));
     }
 
     input = 1; // to be changed

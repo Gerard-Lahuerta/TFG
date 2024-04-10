@@ -1,16 +1,9 @@
 #include "train.h"
 
-double sigmoid(double x) {
-    return 1 / (1 + exp(-x));
-}
-
-double sigmoid_derivative(double x) {
-    return x * (1 - x);
-}
-
 void feedforward(NeuralNetwork *network, double input) {
     unsigned i,j,k;
     double sum;
+    ActivationFunction activation_function = network->activation_function;
 
     // Set input
     network->input_layer.neurons[0].output = input;
@@ -26,7 +19,7 @@ void feedforward(NeuralNetwork *network, double input) {
                 else sum += neuron->weights[j] * network->hidden_layer[k-1].neurons[j].output;
             }
 
-            neuron->output = sigmoid(sum);
+            neuron->output = activation_function(sum);
         }
     }
 
@@ -47,6 +40,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
     unsigned i,j,k;
     double error;
     CostFunction loss_derivative = network->loss_derivative;
+    ActivationFunction activation_function_derivative = network->activation_function_derivative;
 
     // Calculate deltas for the output layer
     for (i = 0; i < OUTPUT_SIZE; i++) {
@@ -69,7 +63,7 @@ void backpropagation(NeuralNetwork *network, double expected_output) {
                 }
             }
 
-            network->hidden_layer[k-1].neurons[i].delta = error * sigmoid_derivative(network->hidden_layer[k-1].neurons[i].output);
+            network->hidden_layer[k-1].neurons[i].delta = error * activation_function_derivative(network->hidden_layer[k-1].neurons[i].output);
         }
     }
 
