@@ -20,8 +20,8 @@ double sigmoid_derivative(double x) {
 
 // ----------------------------------------------------------------------------------
 
-void write_to_log(unsigned epoch, double loss, FILE* log_file) {
+void LOG(unsigned epoch, double loss, FILE* log_file) {
     if (log_file != NULL) {
-        fprintf(log_file, "%d;%d\n", epoch, loss);
+        fprintf(log_file, "%d;%lf\n", epoch, loss);
     }
 }

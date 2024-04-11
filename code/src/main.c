@@ -6,6 +6,12 @@
 
 int main() {
     srand(0); 
+    char log_name[20], res_name[20];
+    sprintf(log_name, "log/%d-%d-%d-%d.csv", INPUT_SIZE, HIDDEN_SIZE, N_HIDDEN, OUTPUT_SIZE);
+    sprintf(res_name, "res/%d-%d-%d-%d.csv", INPUT_SIZE, HIDDEN_SIZE, N_HIDDEN, OUTPUT_SIZE);
+
+
+    FILE* log_file = fopen(log_name,"w+");
 
     CostFunction loss = &quadratic_cost;
     CostFunction loss_derivative = &quadratic_cost_derivative;
@@ -35,14 +41,14 @@ int main() {
         }
         index = rand() % data_size;
         feedforward(&network, input);
-        printf("LOSS - epoch %d|%d --> %lf\n",epoch+1, EPOCHS, loss(expected_output, network.output_layer.neurons[0].output));
+        if (LOG_ENABLED) LOG(epoch+1, loss(expected_output, network.output_layer.neurons[0].output), log_file);
     }
 
     input = 1; // to be changed
     feedforward(&network, input);
     printf("Output: %lf\n", network.output_layer.neurons[0].output);
 
-    save_neurons_to_csv("./data/neuron_values.csv", &network);
+    save_neurons_to_csv(res_name, &network);
 
     free(network.input_layer.neurons);
     for (i = 0; i < N_HIDDEN; i++) free(network.hidden_layer[i].neurons);
