@@ -18,7 +18,7 @@ int main() {
     ActivationFunction activation_function = &sigmoid;
     ActivationFunction activation_function_derivative = &sigmoid_derivative;
 
-    NeuralNetwork network = create_network(loss_derivative, activation_function, activation_function_derivative);
+    NeuralNetwork network = create_network(INPUT_SIZE, HIDDEN_SIZE, N_HIDDEN, OUTPUT_SIZE, loss_derivative, activation_function, activation_function_derivative);
 
     // load dataset
     char* dataset_file = "data/roots.csv";

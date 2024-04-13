@@ -15,6 +15,7 @@ Neuron create_neuron(unsigned num_inputs) {
 Layer create_layer(unsigned num_neurons, unsigned num_inputs_per_neuron) {
     Layer layer;
     layer.num_neurons = num_neurons;
+    layer.input_size = num_inputs_per_neuron;
     layer.neurons = (Neuron *)malloc(num_neurons * sizeof(Neuron));
 
     for (unsigned i = 0; i < num_neurons; i++) {
@@ -24,8 +25,13 @@ Layer create_layer(unsigned num_neurons, unsigned num_inputs_per_neuron) {
     return layer;
 }
 
-NeuralNetwork create_network(CostFunction loss_derivative, ActivationFunction activation_function, ActivationFunction activation_function_derivative) {
+NeuralNetwork create_network(unsigned input_size, unsigned hidden_size, unsigned n_hidden, unsigned output_size, CostFunction loss_derivative, ActivationFunction activation_function, ActivationFunction activation_function_derivative) {
     NeuralNetwork network;
+
+    network.input_size = input_size;
+    network.hidden_size = hidden_size;
+    network.n_hidden = n_hidden;
+    network.output_size = output_size;
     
     network.loss_derivative = loss_derivative;
     network.activation_function = activation_function;

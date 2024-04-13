@@ -27,7 +27,11 @@ double** read_dataset(char* file_name, int* data_size){
 }
 
 void save_neurons_to_csv(const char *filename, NeuralNetwork *network) {
-    unsigned i,j,k;
+    unsigned i,j,k, size, input_size, hidden_size, n_hidden, output_size;
+    input_size = network->input_size;
+    hidden_size = network->hidden_size;
+    n_hidden = network->n_hidden;
+    output_size = network->output_size;
 
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
@@ -35,34 +39,35 @@ void save_neurons_to_csv(const char *filename, NeuralNetwork *network) {
         return;
     }
 
-    fprintf(file, "Layer,Neuron,Weights,Bias\n");
+    fprintf(file, "Layer, Neuron, Weights, Bias\n");
 
     // Write data for input layer
-    for (i = 0; i < INPUT_SIZE; i++) {
+    for (i = 0; i < input_size; i++) {
         Neuron *neuron = &network->input_layer.neurons[i];
-        fprintf(file, "Input,%d,", i); // No input for input layer neurons
-        for (int j = 0; j < INPUT_SIZE; j++) {
-            fprintf(file, "%lf,", neuron->weights[j]);
+        fprintf(file, "Input, %d, ", i); // No input for input layer neurons
+        for (j = 0; j < network->input_layer.input_size; j++) {
+            fprintf(file, "%lf, ", neuron->weights[j]);
         }
         fprintf(file, "%lf\n", neuron->bias);
     }
 
     // Write data for hidden layers
-    for (k = 0; k < N_HIDDEN; k++){
-        for (i = 0; i < HIDDEN_SIZE; i++) {
+    for (k = 0; k < n_hidden; k++){
+        input_size = network->hidden_layer[k].input_size;
+        for (i = 0; i < hidden_size; i++) {
             Neuron *neuron = &network->hidden_layer[k].neurons[i];
-            fprintf(file, "Hidden,%d,", i); // Input for hidden layer neurons
-            for (j = 0; j < INPUT_SIZE; j++) fprintf(file, "%lf,", neuron->weights[j]);
+            fprintf(file, "Hidden, %d - %d, ", k, i); // Input for hidden layer neurons
+            for (j = 0; j < input_size; j++) fprintf(file, "%lf, ", neuron->weights[j]);
             fprintf(file, "%lf\n", neuron->bias);
         }
     }
 
     // Write data for output layer
-    for (i = 0; i < OUTPUT_SIZE; i++) {
+    for (i = 0; i < output_size; i++) {
         Neuron *neuron = &network->output_layer.neurons[i];
-        fprintf(file, "Output,%d-%d,", k,i); // Input for output layer neurons
-        for (j = 0; j < HIDDEN_SIZE; j++) {
-            fprintf(file, "%lf,", neuron->weights[j]);
+        fprintf(file, "Output, %d, ", i); // Input for output layer neurons
+        for (j = 0; j < network->output_layer.input_size; j++) {
+            fprintf(file, " %lf,", neuron->weights[j]);
         }
         fprintf(file, "%lf\n", neuron->bias);
     }
