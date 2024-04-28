@@ -6,9 +6,9 @@
 #define LOG_ENABLED 1
 
 #define INPUT_SIZE 1
-#define HIDDEN_SIZE 2
+#define HIDDEN_SIZE 1
 #define OUTPUT_SIZE 1
-#define N_HIDDEN 2
+#define N_HIDDEN 1
 #define LEARNING_RATE 0.01
 #define EPOCHS 10
 
