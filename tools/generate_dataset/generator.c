@@ -1,14 +1,15 @@
 #include <stdio.h>
+
 #include <math.h>
+#define M_PI 3.14159265358979323846
 
 int main() {
 
-    double root, i, step;
-    unsigned max_value = 100;
+    double res, i, step;
     unsigned char decimals = 2;
 
     FILE *file;
-    file = fopen("data/roots.csv", "w+"); // Abre el archivo para escritura
+    file = fopen("data/sin.csv", "w+"); // Abre el archivo para escritura
 
     if (file == NULL) {
         printf("Error while oppening the file.");
@@ -19,9 +20,9 @@ int main() {
 
     fprintf(file, "Value; Square root\n");
 
-    for (i = 0; i < max_value; i+=step) {
-        root = sqrt(i);
-        fprintf(file, "%lf;%lf\n", i, root);
+    for (i = 0; i < M_PI*0.5; i+=step) {
+        res = sin(i);
+        fprintf(file, "%lf;%lf\n", i, res);
     }
 
     fclose(file);
