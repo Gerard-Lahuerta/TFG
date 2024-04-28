@@ -25,3 +25,19 @@ void LOG(unsigned epoch, double loss, FILE* log_file) {
         fprintf(log_file, "%d;%lf\n", epoch, loss);
     }
 }
+
+// ----------------------------------------------------------------------------------
+
+void swap(unsigned *a, unsigned *b) {
+    unsigned temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void randomize(unsigned *numbers, int n) {
+    int i,j;
+    for (i = n - 1; i > 0; i--) {
+        j = rand() % (i + 1);
+        swap(&numbers[i], &numbers[j]);
+    }
+}

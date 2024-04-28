@@ -38,16 +38,18 @@ int main(int argc, const char* argv[]) {
 
         FILE* log_file = fopen(log_name,"w+");
 
+        unsigned order[data_size];
+        for ( i = 0; i < data_size; i++) order[i] = i;
+
         for (epoch = 0; epoch < EPOCHS; epoch++) {
+            randomize(order, data_size);
             for (i = 0; i < data_size; i++) {
-                index = rand() % data_size;
+                index = order[i];
                 input = dataset[index][0];
                 expected_output = dataset[index][1];
                 feedforward(&network, input);
                 backpropagation(&network, expected_output);
             }
-            index = rand() % data_size;
-            feedforward(&network, input);
             if (LOG_ENABLED) LOG(epoch+1, loss(expected_output, network.output_layer.neurons[0].output), log_file);
         }
 

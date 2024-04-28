@@ -42,5 +42,7 @@ int main(int argc, char *argv[]){
         return 2;
     }
 
+    printf(" -- %s plotted --\n");
+
     return 0;
 }

@@ -11,3 +11,8 @@ double sigmoid_derivative(double x);
 // -----------------------------------------------------------------------------
 
 void LOG(unsigned epoch, double loss, FILE* file_log);
+
+// ----------------------------------------------------------------------------------
+
+void swap(unsigned *a, unsigned *b);
+void randomize(unsigned *numbers, int n);
