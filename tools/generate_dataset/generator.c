@@ -9,7 +9,7 @@ int main() {
     unsigned char decimals = 2;
 
     FILE *file;
-    file = fopen("data/sin.csv", "w+"); // Abre el archivo para escritura
+    file = fopen("data/disc.csv", "w+"); // Abre el archivo para escritura
 
     if (file == NULL) {
         printf("Error while oppening the file.");
@@ -18,15 +18,16 @@ int main() {
 
     step = pow(10, -decimals);
 
-    fprintf(file, "Value; Square root\n");
+    fprintf(file, "Value; Result\n");
 
-    for (i = 0; i < M_PI*0.5; i+=step) {
-        res = sin(i);
+    for (i = 0; i < 3; i+=step) {
+        res = i < 1 ? 1:0;
+        res = i < 2 ? res:-1;
         fprintf(file, "%lf;%lf\n", i, res);
     }
 
     fclose(file);
-    printf("dataset generated succesfully\n");
+    printf(" -- Dataset generated succesfully --\n");
 
     return 0;
 }
