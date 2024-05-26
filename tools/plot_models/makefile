@@ -1,5 +1,5 @@
 CC = gcc  
-TARGET = plot_loss
+TARGET = plot_models
 SRCS = plot.c
 OBJS = $(SRCS:.c=.o)
 BINDIR = ../../scripts
