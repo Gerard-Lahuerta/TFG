@@ -6,11 +6,11 @@
 #define LOG_ENABLED 1
 
 #define INPUT_SIZE 1
-#define HIDDEN_SIZE 10
+#define HIDDEN_SIZE 2
 #define OUTPUT_SIZE 1
 #define N_HIDDEN 2
 #define LEARNING_RATE 0.1
-#define EPOCHS 300
+#define EPOCHS 10000
 
 typedef double (*CostFunction)(double expected_output, double actual_output);
 typedef double (*ActivationFunction)(double value);
