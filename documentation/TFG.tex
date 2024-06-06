@@ -66,7 +66,7 @@
     \rhead[]{} % right part of the header
     \fancyfoot[]{} % borrow the foot counter page
     \lfoot[]{} % left part of the footpage
-    \rfoot[]{\thepage} % right part of the footpage
+    \rfoot[]{} % right part of the footpage
     \renewcommand{\headrulewidth}{0pt} % separator line of the header
     \renewcommand{\footrulewidth}{0.5pt} % separator line of the footpage
 }
@@ -166,8 +166,8 @@ Thank you all for everything.
 
 % CONTENTS
 \tableofcontents
-% \cleardoublepage
-% \addcontentsline{}{section}{}
+\cleardoublepage
+\addcontentsline{}{section}{}
 
 
 \newpage
@@ -175,25 +175,25 @@ Thank you all for everything.
 \section*{Preface}
 
 
-\newpage
+\newpage \pagestyle{extended_plain}
+\setcounter{page}{2}
 \addcontentsline{toc}{section}{Introducción}
 \section*{Introducción}
 \newpage
 
-\newpage \pagestyle{extended_plain}
+\newpage
 \section{Neural Networks} 
-Before starting programming and testing a Neural Network is necessary to understand how Neural Networks work.\\
-\textcolor{white}{a}\\
 A neural Network is made of individual and independent elements connected between them, passing and managing the information through the network formed.\\
-\textcolor{white}{a}\\
 In this thesis we will focus on one of the simplest networks, a multilayer perceptron, to test the different methods of optimization.
 
+
+
+
+
+% MULTILAYER POERCEPTRON
 \subsection{Multilayer Perceptron and Perceptron neuron}
-One of the simple Neural Networks to analyse and program is the Multilayer Perceptron.\\
-\textcolor{white}{a}\\
-It was first proposed by Frank Rosenblat\footnote{Frank Rosenblat, psychologist and father of deep learning, check its \href{https://en.wikipedia.org/wiki/Frank_Rosenblat}{biografy}.} in 1958 (nevertheless its approach did not learn either produce accurate results).\\
-\textcolor{white}{a}\\
-This Neural Network is formed by elements (the artificial neurons) called \textit{Perceptrons} (which gives its name to this network). This neuron is formed by input, weight and activation functions.
+One of the simple Neural Networks to analyse is the Multilayer Perceptron\footnote{To obtain more information about Multilayer Perceptron functionability check \href{https://en.wikipedia.org/wiki/Multilayer_perceptron}}.\\
+It was first proposed by Frank Rosenblat\footnote{Frank Rosenblat, psychologist and father of deep learning, check its \href{https://en.wikipedia.org/wiki/Frank_Rosenblat}{biografy}.} in 1958 (nevertheless its approach did not learn either produce accurate results).
 \begin{figure}[h]
     \begin{minipage}{9cm}
        \begin{center}
@@ -203,20 +203,13 @@ This Neural Network is formed by elements (the artificial neurons) called \texti
     \end{minipage}
     \hspace{1em}
     \begin{minipage}{5cm}
-        The number of inputs that the Perceptron receives is variable but at least needs one input and a biaxe (represented in the picture as the input with value 1).\\
-        \textcolor{white}{a}\\
-        All the inputs are escalated by a factor (the weights of the Perceptron) and then summed together
+        This Neural Network is formed by elements (the artificial neurons) called \textit{Perceptrons}. This neuron is formed by input, weight and activation functions.\\
+        Nevertheless, the most important part of the neuron, and that determines significantly the capabilities of the neuron, is the activation function (which returns the output of the neuron).\\
     \end{minipage}
 \end{figure}\\
-Finally, the result of this sum is introduced in the activation function which returns the output of the neuron.\\
-\textcolor{white}{a}\\
 The traditional activation function used in the Multilayer Perceptron is the Sigmoid: 
 $$f(x) = \frac{1}{1+e^{-w\cdot x}},\text{ where: } x,w\in\mathbb{R}^n$$
-The objective of the activation function is to obtain how relevant the result of the weighted sum is.\\
-\textcolor{white}{a}\\
-The use of the sigmoid function as the activation function allows to represent the output of the perception as a probability (because the image of the sigmoid function is $[0,1]$).
-\newpage
-\hspace{-1.6em}The Multilayer Perceptron is divided into layers with neurons, we can identify three types of layers:
+The Multilayer Perceptron Topology can be splitted into layers of three types:
 \begin{figure}[h]
     \begin{minipage}{9cm}
         \includegraphics[width = 1 \textwidth]{Neural_Network/Multi-layer-perceptron-MLP-NN-basic-Architecture.png}
@@ -231,80 +224,27 @@ The use of the sigmoid function as the activation function allows to represent t
         \end{itemize}
     \end{minipage}
 \end{figure}\\
-The number of hidden layers depends on the problem and the number of neurons in each layer could not be the same.\\
-\textcolor{white}{a}\\
-Moreover, mention some vocabulary used in the Thesis in relation to the Neural Networks architectures:
-\begin{itemize}
-    \item Fully connected: Architecture with all the neurons connected between layers.
-    \item Deep: Architecture where the number of layers is huge to perform complex regression or classification tasks.
-\end{itemize}
-Therefore, we can interpret a Multilayer Perceptron as a weighted sum of activation functions.\\
-\textcolor{white}{a}\\
-But, why a weighted sum of functions can perform complex tasks like classification or regression?
-
-\subsection{Why Neural Networks works}
-Let's imagine that we want to perform regression (for example) on a set of points that exhibit a certain trend, such as a polynomial trend.\\
-\textcolor{white}{a}\\
-In this scenario, it's important to note that any function can be approximated by an infinite sum of sigmoids:
-\begin{equation}
-    f(x) \approx \sum_{i = 0}^N a_i\sigma(w^T_i\cdot x + b_i)
-\end{equation}
-In this context, the function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ is a continuous function to be approximated, $\sigma:\mathbb{R} \rightarrow \mathbb{R}$ is the sigmoid function, $w_i$ represents the weights of the variable $x\in\mathbb{R}^n$, $b_i$ represents the bias, and the parameter $a_i$ is a vector of size $(m,1)$ containing the weights of the sigmoid function.\\
-\textcolor{white}{a}\\
-This approximation is known as the \textbf{Universal Approximation Theorem}, and it enables the Multilayer Perceptron to perform both regression and classification tasks.
-\subsection{Cost Function}
-The most relevant application of the \textbf{Universal Approximation Theorem} in the field of Neural Networks is that it allows us to approximate cost functions, which are functions that evaluate the errors made by the model.\\
-This approximation enables the model to learn by minimizing the error.\\
-\textcolor{white}{a}\\
-The most used cost functions are:
-\begin{enumerate}
-    \item \textbf{Mean Squared Error}:\\
-    The Mean Squared Error (\textit{MSE}) is used in regression tasks. It estimates the error of the model. Its expression is:
-    \begin{equation}
-        MSE = \frac{1}{2} \sum_{i = 1}^{n} \left( \hat{y_i} - y_i \right)^2
-    \end{equation}
-    Where $ \hat{y}_i := f(x_i)$ represents the predicted value of the dependent variable $y_i$ to be estimated, and $n$ is the number of samples in the dataset, where $n\in\mathbb{N}$.
-    \item \textbf{Cross-Entropy Loss}:\\
-    The Cross-Entropy Loss (\textit{CEL}) is used in multi-class classification tasks. It estimates the accuracy of the model. Its expression is:
-    \begin{equation}
-        CEL = - \frac{1}{n} \sum_{i=1}^n \left(  y_{i} \cdot log(\hat{y_{i}}) \right), \text{ where } \hat{y}_i := f(x_i), n\in \mathbb{N}
-    \end{equation}
-     Where $ \hat{y}_i$ is the predicted probability of the \textit{i-th} data classified as the class $y_i$ and $n\in\mathbb{N}$ the number of samples.\\
-\end{enumerate}
-Despite the existence of these two cost functions, there are more complex functions that are widely used, such as the \textbf{Mean Absolute Error}.\\
-\textcolor{white}{a}\\
-This minimization process (despite the cost function) is used iteratively to determine the values of the parameters in Neural Networks, regardless of the type of task or network.\\
-\textcolor{white}{a}\\
-The use of iterative optimizers to obtain the best parameters for a Neural Network arises due to the complexity of finding the coefficients that minimize the cost function.\\ 
-Moreover, in some cases, it's possible that such coefficients may not exist or cannot be obtained analytically.\\
-\textcolor{white}{a}\\
-This is why it's important to use differentiable cost functions in training neural networks, as they allow us to leverage the gradient of the cost function to obtain the optimal set of parameters. However, we will discuss this topic in more detail shortly.
-
 \newpage
-\subsection{BackPropagation}
-The importance of using differentiable cost functions lies in their compatibility with the BackPropagation training algorithm. This algorithm relies on the derivatives of the cost function to compute the gradients for each neuron, which are then used in gradient descent optimization.\\
-\textcolor{white}{a}\\
-One widely used example, often employed for educational purposes to practice and understand the algorithm, is the following network:
-\vspace{-1em}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width = 1 \textwidth]{Neural_Network/back-graph.png}
-    \vspace{-3em}
-    \caption{Example of BackPropagation algorithm in simple graph}
-    \label{back-prop-example}
-\end{figure}\\
-In the example shown in Figure \ref{back-prop-example}, if we want to modify the value of the parameter $a$ based on the output $d$, we can apply the chain rule of derivatives, as demonstrated in this case:
-\begin{equation*}
-    \frac{\partial D}{\partial a} = \frac{\partial d}{\partial a} + \frac{\partial d}{\partial c} \cdot \frac{\partial c}{\partial a} = c + a = 2a+b
-\end{equation*}
-This algorithm solves one of the biggest problems in early neural network studies related to their development and training. In practice, when a neural network is used, regardless of the task, the only information available is the input and the output.\\
-\textcolor{white}{a}\\
-This aspect renders the usage of neural networks with more than 2 layers (with more than 1 hidden layer) unviable.\\
-\textcolor{white}{a}\\
-The solution to this problem was the \textbf{Back-Propagation} algorithm, which "propagates the effects backwards", through each neuron based on its relevance to the obtained output.\\
-\textcolor{white}{a}\\
-This solution was first introduced by Frank Rosenblatt in 1962 for training an \textit{MLP} (Multi-Layer Perceptron). It was subsequently adopted and used in the training process of various types of neural networks due to its effectiveness, allowing the network to optimize the parameters of each neuron to minimize the error, as represented by the cost function, through \textbf{gradient descent}.
-\newpage 
+
+
+
+
+
+
+% WHY WORKS
+\subsection{Why Neural Networks works}
+It is important to remark that what gives the capacity of model any system is because we can express everyproblem as a function (no matter if its a classification tasck, probability function, or prediction, regression function).\\
+The association between a tasck and a function allow to apply the \textbf{Universal Approximation Theorem}.\\
+\hline
+\begin{itemize}
+    \item \textbf{Definition:} Universal Approximation Theorem.
+\end{itemize}  
+For any function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ and a subset $D\subset \mathbb{R}^n$ where $f$ is continuous at all $D$, 
+$\exists \{(w_i, b_i, c_i)\}_{i = 0}^k$ that: 
+$$f(\vec{x}) - \lim_{k \rightarrow \infty} \sum_{i=0}^{k} c_i \sigma \left( w^T \cdot \vec{x} + b_i \right) = 0$$
+Where $w_i \in \mathbb{R}^n$, $b_i\in \mathbb{R}$, $c_i \in \mathbb{R}^m$, $\vec{x}\in D$ and $\sigma$ the sigmoid function.\\
+\hline
+
 
 \begin{thebibliography}{X}
 \bibitem{WIKIPEDIA-MLP} \textsc{Wikipedia},
