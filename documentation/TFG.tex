@@ -192,7 +192,7 @@ In this thesis we will focus on one of the simplest networks, a multilayer perce
 
 % MULTILAYER POERCEPTRON
 \subsection{Multilayer Perceptron and Perceptron neuron}
-One of the simple Neural Networks to analyse is the Multilayer Perceptron\footnote{To obtain more information about Multilayer Perceptron functionability check \href{https://en.wikipedia.org/wiki/Multilayer_perceptron}}.\\
+One of the simple Neural Networks to analyse is the Multilayer Perceptron\footnote{To obtain more information about Multilayer Perceptron functionability check the following \href{https://en.wikipedia.org/wiki/Multilayer_perceptron}}{link}.\\
 It was first proposed by Frank Rosenblat\footnote{Frank Rosenblat, psychologist and father of deep learning, check its \href{https://en.wikipedia.org/wiki/Frank_Rosenblat}{biografy}.} in 1958 (nevertheless its approach did not learn either produce accurate results).
 \begin{figure}[h]
     \begin{minipage}{9cm}
@@ -239,13 +239,63 @@ The association between a tasck and a function allow to apply the \textbf{Univer
 \begin{itemize}
     \item \textbf{Definition:} Universal Approximation Theorem.
 \end{itemize}  
-For any function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ and a subset $D\subset \mathbb{R}^n$ where $f$ is continuous at all $D$, 
+For any function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$, with $m,n\in\mathbb{N}$, and a subset $D\subset \mathbb{R}^n$ where $f$ is continuous at all $D$, 
 $\exists \{(w_i, b_i, c_i)\}_{i = 0}^k$ that: 
-$$f(\vec{x}) - \lim_{k \rightarrow \infty} \sum_{i=0}^{k} c_i \sigma \left( w^T \cdot \vec{x} + b_i \right) = 0$$
+$$f(\vec{x}) - \lim_{k \rightarrow \infty} \sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right) = 0$$
 Where $w_i \in \mathbb{R}^n$, $b_i\in \mathbb{R}$, $c_i \in \mathbb{R}^m$, $\vec{x}\in D$ and $\sigma$ the sigmoid function.\\
+\hline\\\vspace{0.5em}
+\hspace{-1.6em}The parameters $\{w_i, b_i, c_i\}$ are associated (respectively) with the weights, bias and scale factor of the i-th neuron.\\
+Neural Networks essentially use this theorem with a limit number of sigmoid (equal at de number of neurons), consecuently an error of approximation is given.
+$$f(\vec{x})-\sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right) = \epsilon, k \in \mathbb{N}$$
+Modeling systems the information of the function shape/tendency is limited or none, making only possible study the problem using data values.\\
+This cases hare handle using the \textit{square-norm} metric (or \textit{Mean Squared Error}).\\
 \hline
+\begin{itemize}
+    \item \textbf{Definition:} Square-norm: 
+\end{itemize}
+Being $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ function followed by the system.
+Being $g:\mathbb{R}^n \rightarrow \mathbb{R}^m$, with $m,n\in\mathbb{N}$, as $g(\vec{x}) = \sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right)$.\\
+Given a dataset $B = \{(\vec{x_i},\vec{y_i})\}_{i=0}^{N}$, with $N \in \mathbb{N}$, where $\forall (\vec{x_i},\vec{y_i}) \in B, \vec{y_i} = f(\vec{x_i})$.
+$$\Delta^2 = \frac{1}{N} \sum_{i=0}^{N} \left( \vec{y_i} - g(\vec{x_i}) \right)^2$$
+\hline\\\vspace{0.5em}
+\hspace{-1.6em}Decreassing the error $\Delta$ implies reducing the error $\epsilon$ because as $\Delta$ decrease the model improves its approximation whereas $\epsilon$ decrease.\\
+As the more neurons are added into the Network, the approximation and the training time increases. This increase in training time for the model in cases is not worth it as it represents a minimum improvement of the model.\\
+Moreover, the Backpropagation\footnote{The Backpropagation method is an algorithm to modify the internal parameters of a Neural network by using the chain rule, more information in the following \href{https://en.wikipedia.org/wiki/Backpropagation}{link}} method used to train Neural Networks have a complexity that increase the process time exponentially to the number of neurons.\\
+Therefore, trying to obtain the ideal topology for solving a problem is a dificult tasck that in many cases resides about trial error.
+\newpage 
+\section{Neural Networks topology}
+The main objective of the study is obtaining a more efficient process using neural networks than the traditional ways that has been used at time.\\
+Doing this requires, as has been explained before, a non undertand process to obtain an eficient neural network.\\
+Therefore, an observation has done while approaching this problem that could partial solve that non-undertand of what really is doing the neural network and deduce the optimal architecture. 
+\subsection{Hypotesis and Proposal}
+As has been said before, approaching this problem an intuitive idea apeared. \\
+\hline
+\begin{itemize}
+    \item \textbf{Proposal:} If there is enough information about the system to model, exists an eficient neural network which architecture can be obtained using rules.
+\end{itemize}
+\hline \\ \vspace{0.5em}
+The idea proposed is influenced by the following observations:
+\begin{enumerate}
+    \item Every deterministic process is a convination of restriccions that can be represented as a function.
+    \item Every function can be splitted in domaind which its behavior can be categorized as: periodical, irrational, polinomical.
+    \item The periodical, polinomical and irrational functions are continuous in "all"\footnote{In case of irrational functions such as $\sqrt{x}$, it can be interpretated as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ \sqrt(x), x \geq 0 \end{matrix} \right.$} domain.
+    \item All continuous functions can be approximated using the \textbf{Universal Approximation Theorem}.
+\end{enumerate}
+Moreover, if a function does not follow one of this types of functions, it can be splited by more intervals until each of them can be aproximated by one of this types or even can be approximated using \textit{Fourier Series} or \textit{Taylor series} allowing it to be modeled by periodical and polinomical functions.\\
+Therefore, this proposal can be verified reducing it into corroborate the following points:
+\begin{enumerate}
+    \item Each category of functions mencioned can be modeled using a particular architecture of neural network.
+    \item Exists a determined minimum number of data registers were the neural network can be trained.  
+\end{enumerate}
+To verify the proposal a topological, efficiency and preccision studies is required.
+
+\newpage
+\subsection{Study of deterministic process}
+\subsection{Conclusions and observations of the results}
 
 
+
+\newpage
 \begin{thebibliography}{X}
 \bibitem{WIKIPEDIA-MLP} \textsc{Wikipedia},
 \textit{Multilayer perceptron},\\ \url{https://en.wikipedia.org/wiki/Multilayer_perceptron}
