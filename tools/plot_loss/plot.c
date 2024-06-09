@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
         fprintf(gnuplotPipe, "set xrange [*:*]\n");
         fprintf(gnuplotPipe, "set yrange []\n");
 
-        fprintf(gnuplotPipe, "plot \"%s.csv\" using 1:2 with linespoints\n",file);
+        fprintf(gnuplotPipe, "plot \"%s.csv\" using 1:2 with linespoints title \"MSE\"\n",file);
         
         fprintf(gnuplotPipe, "exit\n");
         pclose(gnuplotPipe);
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
         return 2;
     }
 
-    printf(" -- %s plotted --\n");
+    printf(" -- %s plotted --\n", file);
 
     return 0;
 }

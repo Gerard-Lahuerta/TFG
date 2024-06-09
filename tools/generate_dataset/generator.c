@@ -9,7 +9,7 @@ int main() {
     unsigned char decimals = 2;
 
     FILE *file;
-    file = fopen("data/sqrt.csv", "w+"); // Abre el archivo para escritura
+    file = fopen("data/sin.csv", "w+"); // Abre el archivo para escritura
 
     if (file == NULL) {
         printf("Error while oppening the file.");
@@ -20,8 +20,8 @@ int main() {
 
     fprintf(file, "Value; Result\n");
 
-    for (i = -4; i < 4; i+=step) {
-        res = i < 0 ? 0:sqrt(i);
+    for (i = 0; i < 2*M_PI; i+=step) {
+        res = sin(i);
         fprintf(file, "%lf;%lf\n", i, res);
     }
 

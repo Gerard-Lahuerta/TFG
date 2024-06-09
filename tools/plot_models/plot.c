@@ -26,14 +26,14 @@ int main(int argc, char *argv[]){
 
         fprintf(gnuplotPipe, "set title \"Datos - %s\"\n", name);
 
-        fprintf(gnuplotPipe, "set xlabel \"EPOCHS\"\n");
-        fprintf(gnuplotPipe, "set ylabel \"LOSS\"\n");
+        fprintf(gnuplotPipe, "set xlabel \"DOMAIN\"\n");
+        fprintf(gnuplotPipe, "set ylabel \"IMAGE\"\n");
 
         fprintf(gnuplotPipe, "set datafile sep ';'\n");
         fprintf(gnuplotPipe, "set xrange [*:*]\n");
         fprintf(gnuplotPipe, "set yrange []\n");
 
-        fprintf(gnuplotPipe, "plot \"%s.csv\" using 1:2 with linespoints, \"%s\" using 1:2 with linespoints\n", file1, file2);
+        fprintf(gnuplotPipe, "plot \"%s.csv\" using 1:2 with linespoints title \"Data\", \"%s\" using 1:2 with linespoints title \"Model\" \n", file1, file2);
         
         fprintf(gnuplotPipe, "exit\n");
         pclose(gnuplotPipe);
