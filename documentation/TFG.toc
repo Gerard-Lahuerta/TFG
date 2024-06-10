@@ -1,0 +1,19 @@
+\contentsline {section}{Declaration of Authorship}{2}{figure.caption.1}%
+\contentsline {section}{Abstract}{3}{section*.2}%
+\contentsline {section}{Acknowledgements}{4}{section*.3}%
+\contentsline {section}{Preface}{6}{section*.6}%
+\contentsline {section}{Introducción}{2}{section*.7}%
+\contentsline {section}{\numberline {1}Neural Networks}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Multilayer Perceptron and Perceptron neuron}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Why Neural Networks works}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Neural Networks topology}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Hypotesis and Proposal}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Study of deterministic process}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Study of the \textit {sin} function}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Study of the \textit {parabolic} function}{7}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Study of the \textit {squared root} function}{7}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Observations of the results}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Viability of approximation discontinuous functions}{8}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Study of Jump discontinuity}{8}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Study of Asimptotyc discontinuity}{8}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Conclusions}{8}{subsection.2.5}%
