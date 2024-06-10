@@ -302,29 +302,49 @@ This paper use $I-H-N-O$ nomenclature to represent the architecture of the neura
 \subsubsection{Study of the \textit{sin} function}
 To test if exists an architecture that can approximated efficiently the $\sin$ function in the real plane, will be study to approximated the function in the interval $[0, 2\pi]$ using a fixed number of iterations with diferents architectures.    
 \begin{figure}[h]
-        \centering
-        \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-1-1.png}}
-        \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-1-1.png}}
+    \centering
+    \subfloat[Model 1-1-1-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-1-1.png}}
+    \subfloat[MSE 1-1-1-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-1-1.png}}
     \hspace{1em}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-2-1.png}}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-2-1.png}}
+    \subfloat[Model 1-1-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-2-1.png}}
+    \subfloat[MSE 1-1-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-2-1.png}}
     \\
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-3-1.png}} 
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-3-1.png}}
+    \subfloat[Model 1-1-3-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-3-1.png}} 
+    \subfloat[MSE 1-1-3-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-1-3-1.png}}
     \hspace{1em}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-2-2-1.png}}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-2-2-1.png}}
+    \subfloat[Model 1-2-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-2-2-1.png}}
+    \subfloat[MSE 1-2-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-2-2-1.png}}
     \\
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-2-4-1.png}}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-2-4-1.png}}
+    \subfloat[Model 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-2-4-1.png}}
+    \subfloat[MSE 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-2-4-1.png}}
     \hspace{1em}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-2-1.png}}
-    \subfloat[a]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-2-1.png}}
-    \caption{q}
+    \subfloat[Model 1-4-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-2-1.png}}
+    \subfloat[MSE 1-4-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-2-1.png}}
+    \caption{Results of diferents architectures approximating the function \textit{sin}}
     \label{fsin100}
 \end{figure}\\
-The results shown in Figure \ref{fsin100} where obtained fixing 100 epochs and trained using the stochastic gradient descend method with a learning rate of $0.1$ trying to minimice the \textit{Square-norm} error (\textit{MSE}). 
-\newpage
+The results shown in Figure \ref{fsin100} where obtained fixing 100 epochs and trained using the stochastic gradient descend method with a learning rate of $0.1$ trying to minimice the \textit{Square-norm} error (\textit{MSE}).\\
+As can be seen in the Figure, almost all architectures does not approximate the $\sin$ function properly, despite the architectures \textit{1-2-2-1} and \textit{1-4-2-1}.\\
+If the experiment is repeated changing the epoch number (insted of 100 change to 200) the results are almost similar (with more precission in some parts but no improvement of modelation).\\
+However, the architectures \textit{1-4-4-1} and \textit{1-4-2-1} give an augment of precission significally important.
+\begin{figure}[h]
+    \subfloat[Model 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-2-1(200).png}}
+    \subfloat[MSE 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-2-1(200).png}}
+    \hspace{1em}
+    \subfloat[Model 1-4-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-4-1(200).png}}
+    \subfloat[MSE 1-4-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-4-1(200).png}}
+    \caption{Architectures that improves the modelation of \textit{sin} function}
+    \label{fsin200}
+\end{figure}
+The approximation done by these architectures is so significant that allow to observe and conclut that the model that approximates the best the $\sin$ function if 1-2-4-1.\\
+This conlusion is obtained because is the minimum architecture that can approximate the function, that can "learn"\footnote{Learn in this tearm refears as if the training process allow to reduce the loss (also named error) near 0 with a significally decrease throughout the epochs.}.\\
+Moreover, it can be an evidence of the following proposal:\\
+\rule{\linewidth}{0.4pt}
+\begin{itemize}
+    \item \textbf{Proposal:} To approximate any periodical function in real plane needs minimum 2 neurons in each of the $2\cdot K$ hiddden layers, where $K$ is sum of relatives extrems and point of inflection of the function.
+\end{itemize}
+\rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
+This proposal is obtained observing that every layer of the neural netwrok is modeling one interval (delimited by the extreams of the function and inflection points) and for perform that approximation nead at least 2 sigmoids.
 
 \subsubsection{Study of the \textit{parabolic} function}
 \subsubsection{Study of the \textit{squared root} function}
