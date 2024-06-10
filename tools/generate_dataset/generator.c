@@ -9,7 +9,7 @@ int main() {
     unsigned char decimals = 2;
 
     FILE *file;
-    file = fopen("data/sin.csv", "w+"); // Abre el archivo para escritura
+    file = fopen("data/poli3.csv", "w+"); // Abre el archivo para escritura
 
     if (file == NULL) {
         printf("Error while oppening the file.");
@@ -20,8 +20,8 @@ int main() {
 
     fprintf(file, "Value; Result\n");
 
-    for (i = 0; i < 2*M_PI; i+=step) {
-        res = sin(i);
+    for (i = -2; i < 2; i+=step) {
+        res = i*i*i;
         fprintf(file, "%lf;%lf\n", i, res);
     }
 

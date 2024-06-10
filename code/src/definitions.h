@@ -8,7 +8,7 @@
 #define INPUT_SIZE 1
 #define HIDDEN_SIZE 2
 #define OUTPUT_SIZE 1
-#define N_HIDDEN 2
+#define N_HIDDEN 1
 #define LEARNING_RATE 0.1
 #define EPOCHS 100
 
