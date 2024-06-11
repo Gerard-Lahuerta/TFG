@@ -6,7 +6,7 @@
 int main() {
 
     double res, i, step;
-    unsigned char decimals = 5;
+    unsigned char decimals = 3;
 
     FILE *file;
     file = fopen("data/tan.csv", "w+"); // Abre el archivo para escritura

@@ -20,7 +20,7 @@ int main() {
     NeuralNetwork network = create_network(INPUT_SIZE, HIDDEN_SIZE, N_HIDDEN, OUTPUT_SIZE, loss_derivative, activation_function, activation_function_derivative);
 
     // load dataset
-    char* dataset_file = "data/disc.csv";
+    char* dataset_file = "data/tan.csv";
     int index, i, data_size = 0;
     double** dataset = read_dataset(dataset_file, &data_size);
 
