@@ -3,8 +3,8 @@
 
 unsigned number_to_roman(unsigned num){
 
-    char val[5] = {10, 9, 5, 4, 1};
-    char symb[5][2] = {"X ", "IX", "V ", "IV", "I "};
+    char val[5] = {50, 40, 10, 9, 5, 4, 1};
+    char symb[5][2] = {"L ", "XL", "X ", "IX", "V ", "IV", "I "};
     
     unsigned roman_numeral = 0, i = 0, j;
     while(num > 0){

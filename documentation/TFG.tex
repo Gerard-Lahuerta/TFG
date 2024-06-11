@@ -335,7 +335,7 @@ However, the architectures \textit{1-4-4-1} and \textit{1-4-2-1} give an augment
     \subfloat[MSE 1-4-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-4-1(200).png}}
     \caption{Architectures that improves the modelation of \textit{sin} function}
     \label{fsin200}
-\end{figure}
+\end{figure}\\
 The approximation done by these architectures is so significant that allow to observe and conclut that the model that approximates the best the $\sin$ function if 1-2-4-1.\\
 This conlusion is obtained because is the minimum architecture that can approximate the function, that can "learn"\footnote{Learn in this tearm refears as if the training process allow to reduce the loss (also named error) near 0 with a significally decrease throughout the epochs.}.\\
 Moreover, it can be an evidence of the following proposal:\\
@@ -345,9 +345,48 @@ Moreover, it can be an evidence of the following proposal:\\
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
 This proposal is obtained observing that every layer of the neural netwrok is modeling one interval (delimited by the extreams of the function and inflection points) and for perform that approximation nead at least 2 sigmoids.
-
 \subsubsection{Study of the \textit{parabolic} function}
+The results obtained for polinocmical functions are shown in \ref{poli100}.
+\begin{figure}[h!]
+    \centering
+    \subfloat[\centering Model\\1-1-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-1-1-1-1.png}}
+    \subfloat[\centering MSE\\1-1-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-loss-1-1-1-1.png}} \hspace{0.5em}
+    \subfloat[\centering Model\\1-2-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-1-2-1-1.png}}
+    \subfloat[\centering MSE\\1-2-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-loss-1-2-1-1.png}} \hspace{0.5em}
+    \subfloat[\centering Model\\1-2-2-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-1-2-2-1.png}}
+    \subfloat[\centering MSE\\1-2-2-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli2-loss-1-2-2-1.png}}
+    \\\vspace{1em}
+    \subfloat[\centering Model\\1-1-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-1-1-1-1.png}}
+    \subfloat[\centering MSE\\1-1-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-loss-1-1-1-1.png}} \hspace{0.5em}
+    \subfloat[\centering Model\\1-2-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-1-2-1-1.png}}
+    \subfloat[\centering MSE\\1-2-1-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-loss-1-2-1-1.png}} \hspace{0.5em}
+    \subfloat[\centering Model\\1-2-2-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-1-2-2-1.png}}
+    \subfloat[\centering MSE\\1-2-2-1]{\includegraphics[width=0.15\linewidth]{img/poli/poli3-loss-1-2-2-1.png}}
+    \caption{Results of diferents architectures approximating the functions $x^2$ and $x^3$}
+    \label{poli100}
+\end{figure}\\
+It shows how the most efficient architecture (which give the better performance as modeling as precission) in $ $.\\
+This architecture is similar obtained before with the periodical functions but is not the same, which was one of the axioms suposed in the proposal.\\
+Therefore, a last study will be done to obtain the architecture need to model the irrational functions.
+\newpage
 \subsubsection{Study of the \textit{squared root} function}
+Finally, reproducing the experiment for the function $\sqrt{x}$, the results obtained are shown in \ref{sqrt100}.
+\begin{figure}[h]
+    \centering
+    \subfloat[Model 1-1-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-1-1-1-1.png}}
+    \subfloat[MSE 1-1-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-loss-1-1-1-1.png}}
+    \hspace{1em}
+    \subfloat[Model 1-1-2-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-1-1-2-1.png}}
+    \subfloat[MSE 1-1-2-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-loss-1-1-2-1.png}}
+    \\
+    \subfloat[Model 1-2-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-1-2-1-1.png}} 
+    \subfloat[MSE 1-2-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-loss-1-2-1-1.png}}
+    \hspace{1em}
+    \subfloat[Model 1-3-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-1-3-1-1.png}}
+    \subfloat[MSE 1-3-1-1]{\includegraphics[width=0.24\linewidth]{img/sqrt/sqrt-loss-1-3-1-1.png}}
+    \caption{Results of diferents architectures approximating the function $\sqrt{x}$}
+    \label{sqrt100}
+\end{figure}\\
 
 \newpage
 \subsection{Observations of the results}
