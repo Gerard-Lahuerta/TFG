@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned number_to_roman(unsigned num){
+int number_to_roman(int num){
 
-    char val[5] = {50, 40, 10, 9, 5, 4, 1};
-    char symb[5][2] = {"L ", "XL", "X ", "IX", "V ", "IV", "I "};
+    char initial = 'A';
+
+    char val[7] = {50, 40, 10, 9, 5, 4, 1};
+    char symb[7][2] = {"L ", "XL", "X ", "IX", "V ", "IV", "I "};
     
-    unsigned roman_numeral = 0, i = 0, j;
+    int roman_numeral = 0, i = 0, j;
     while(num > 0){
         for( j = 0; j < num/val[i]; j++){
-            if (symb[i][1] != ' '){
+            if (symb[i][1] == ' '){
                 roman_numeral += symb[i][0];
                 num -= val[i];
             }
@@ -18,6 +20,7 @@ unsigned number_to_roman(unsigned num){
                 roman_numeral -= symb[i][1];
                 num -= val[i];
             }
+            roman_numeral -= initial;
             
         }
         i ++;
@@ -27,8 +30,7 @@ unsigned number_to_roman(unsigned num){
 
 
 int main() {
-    unsigned i, max_value = 40;
-    unsigned res;
+    int i, res, max_value = 90;
     FILE *file;
     file = fopen("data/roman.csv", "w+"); // Abre el archivo para escritura
 
@@ -41,6 +43,7 @@ int main() {
 
     for (i = 0; i < max_value; i++) {
         res = number_to_roman(i);
+        printf("%d-%d\n",i,res);
         fprintf(file, "%d;%d\n", i, res);
     }
 
