@@ -6,10 +6,10 @@
 int main() {
 
     double res, i, step;
-    unsigned char decimals = 2;
+    unsigned char decimals = 5;
 
     FILE *file;
-    file = fopen("data/poli3.csv", "w+"); // Abre el archivo para escritura
+    file = fopen("data/tan.csv", "w+"); // Abre el archivo para escritura
 
     if (file == NULL) {
         printf("Error while oppening the file.");
@@ -20,8 +20,9 @@ int main() {
 
     fprintf(file, "Value; Result\n");
 
-    for (i = -2; i < 2; i+=step) {
-        res = i*i*i;
+    for (i = -M_PI/2; i < M_PI/2; i+=step) {
+        res = tan(i);
+        if (fabs(res) > 100) continue;
         fprintf(file, "%lf;%lf\n", i, res);
     }
 
