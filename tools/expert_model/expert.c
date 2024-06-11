@@ -5,15 +5,17 @@ int number_to_roman(int num){
 
     char initial = 'A';
 
-    char val[7] = {50, 40, 10, 9, 5, 4, 1};
-    char symb[7][2] = {"L ", "XL", "X ", "IX", "V ", "IV", "I "};
+    char val[9] = {100, 90, 50, 40, 10, 9, 5, 4, 1};
+    char symb[9][2] = {"C ", "XC", "L ", "XL", "X ", "IX", "V ", "IV", "I "};
     
-    int roman_numeral = 0, i = 0, j;
+    int roman_numeral = 0, i = 0;
     while(num > 0){
-        for( j = 0; j < num/val[i]; j++){
+        // printf("-->%d | %d\n", val[i], num/val[i]);
+        while( num-val[i] >= 0){
             if (symb[i][1] == ' '){
                 roman_numeral += symb[i][0];
                 num -= val[i];
+                // printf("WOOOOW %d\n",j);
             }
             else{
                 roman_numeral += symb[i][0];
@@ -30,7 +32,7 @@ int number_to_roman(int num){
 
 
 int main() {
-    int i, res, max_value = 90;
+    int i, res, max_value = 50;
     FILE *file;
     file = fopen("data/roman.csv", "w+"); // Abre el archivo para escritura
 
@@ -41,9 +43,9 @@ int main() {
 
     fprintf(file, "Value; Result\n");
 
-    for (i = 0; i < max_value; i++) {
+    for (i = 1; i < max_value; i++) {
         res = number_to_roman(i);
-        printf("%d-%d\n",i,res);
+        // printf("%d-%d\n",i,res);
         fprintf(file, "%d;%d\n", i, res);
     }
 
