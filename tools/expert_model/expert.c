@@ -16,13 +16,13 @@ int number_to_roman(int num){
                 roman_numeral += symb[i][0];
                 num -= val[i];
                 // printf("WOOOOW %d\n",j);
+                roman_numeral -= initial;
             }
             else{
-                roman_numeral += symb[i][0];
-                roman_numeral -= symb[i][1];
+                roman_numeral += symb[i][1];
+                roman_numeral -= symb[i][0];
                 num -= val[i];
             }
-            roman_numeral -= initial;
             
         }
         i ++;
@@ -32,7 +32,7 @@ int number_to_roman(int num){
 
 
 int main() {
-    int i, res, max_value = 50;
+    int i, res, max_value = 400;
     FILE *file;
     file = fopen("data/roman.csv", "w+"); // Abre el archivo para escritura
 

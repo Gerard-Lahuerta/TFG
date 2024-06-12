@@ -346,6 +346,8 @@ Moreover, it can be an evidence of the following proposal:\\
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
 This proposal is obtained observing that every layer of the neural netwrok is modeling one interval (delimited by the extreams of the function and inflection points) and for perform that approximation nead at least 2 sigmoids.
 \subsubsection{Study of the \textit{parabolic} function}
+The same experiment have been done with the function $x^2$ (and also the $x^3$ to have more results to compare) with fixed epochs, learning rate and domain.\\
+Concretly, the values of epochs, learning rate and domain used are, respectively, $100$, $0.1$ and $[-2,2]$.\\
 The results obtained for polinocmical functions are shown in \ref{poli100}.
 \begin{figure}[h!]
     \centering
@@ -365,7 +367,7 @@ The results obtained for polinocmical functions are shown in \ref{poli100}.
     \caption{Results of diferents architectures approximating the functions $x^2$ and $x^3$}
     \label{poli100}
 \end{figure}\\
-It shows how the most efficient architecture (which give the better performance as modeling as precission) in $ $.\\
+It shows how the most efficient architecture (which give the better performance as modeling as precission) is the $1-2-1-1$.\\
 This architecture is similar obtained before with the periodical functions but is not the same, which was one of the axioms suposed in the proposal.\\
 Therefore, a last study will be done to obtain the architecture need to model the irrational functions.
 \newpage
@@ -387,12 +389,96 @@ Finally, reproducing the experiment for the function $\sqrt{x}$, the results obt
     \caption{Results of diferents architectures approximating the function $\sqrt{x}$}
     \label{sqrt100}
 \end{figure}\\
-
-\newpage
-\subsection{Observations of the results}
+In this study, the only parameters that where changed respect the previous experiments was the domain (which was increased to the interval $[-4,4]$).\\
+As it can be observed, the architecture that approximate the best the function is $1-3-1-1$.\\
+Moreover, comment that the intutition of the inclusion of irrational funccions such as the $\sqrt{x}$ in the axioms of the proposal was made to use the property of having a function similar to $ReLU$\footnote{The \textit{ReLU} function is widely use as an activation function which is deffined as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ x, x\geq 0\end{matrix} \right.$}.\\
+This inclusion of the function $\sqrt(x)$ in spite of the $ReLU$ was made thinking that was a better option and the least "forced" option of any other function that could give that similar property. However, this text between other similar functions was not made so could be interesting to expand this stuidy adding and experiment with other functions.
 \subsection{Viability of approximation discontinuous functions}
+It is important to have in mind that splitting functions in domains can develop in discontinuities which does not allow the use of the \textbf{Universal Approximation Theorem}.\\
+Nevertheless the application of neural networks in tascks such as classification or regression in many areas, with no information of the function that are approximating, using activation functions diferent from the \textit{sigmoid} that give (apparently) correct results give the idea that possibly the theorem could be expanded and (in some cases) have no need of the continuity restriction.\\
+\rule{\linewidth}{0.4pt}
+\begin{itemize}
+    \item \textbf{Proposal:} If a function has discontinuities diferent from asimptotyc, the \textbf{Universal Approximation Theorem} can be used to give an approximation with error 0 when the number of sigmoid tends to infinity.
+\end{itemize}
+\rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
+This proposal can be sustain by the ability of sigmoid functions to approximate jump discontinuities. However, an experiment with discontinuous functions have done to give evidence of this proposal.
 \subsubsection{Study of Jump discontinuity}
+In this experiment a simple architecture of $1-2-2-1$ with high amount of epochs (concretly $10000$) and fixed learning rate of $0.1$ have been used to approximated the function:
+$$ f(x) = \left\{ \begin{matrix}
+    1, x \leq 1 \\
+    0, x \in (1,2] \\
+    -1, x > 2
+\end{matrix} \right. $$
+The results of approximating the function in the interval $[0,3]$ are shown in \ref{disc}.
+\begin{figure}[h]
+    \centering
+    \subfloat[Model]{\includegraphics[width=0.5\linewidth]{img/disc/disc-1-2-2-1.png}}
+    \subfloat[MSE]{\includegraphics[width=0.5\linewidth]{img/disc/disc-loss-1-2-2-1.png}}
+    \caption{Architecture $1-2-2-1$ approximation to a jump discontinuity function}
+    \label{disc}
+\end{figure}\\
+As can be seen in the figure \ref{disc}, using a limited model with enough number of epochs the approximation is quiet acceptable. Therefore the use of \textit{sigmoid} functions in approximate splitted functions with jump discontinuities can be use at least in some cases.
 \subsubsection{Study of Asimptotyc discontinuity}
+However, the application of the \textbf{Universal Approximation Theorem} in discontinuities such as asimptotyc can give problems that impossibilates the modelation using sigmoids.\\
+Repeating the experiment done with the jump discontinuity function, but with a more prowerfull architecture, to approximate the function $\tan{x}$ in the interval $[-\frac{\pi}{2},\frac{\pi}{2}]$ give us an idea of this problem.\\
+The results obtained are shown in \ref{asymp}.
+\begin{figure}[h]
+    \centering
+    \subfloat[Model]{\includegraphics[width=0.5\linewidth]{img/disc/tan-1-5-5-1.png}}
+    \subfloat[MSE]{\includegraphics[width=0.5\linewidth]{img/disc/tan-loss-1-5-5-1.png}}
+    \caption{Architecture $1-5-5-1$ approximation to $\tan{x}$ function}
+    \label{asymp}
+\end{figure}\\
+As can be observed the neural network is limited and cannot approximate properly the function. However, the use of other activation function such as the $ReLU$ mentioned before can give a better performance.\\
+In case of using the $ReLU$ function, it give another problem that can be dificult to handle, the \textbf{Universal Approximation Theorem} does not ensure that the resulting function approximates with a limited error the system.\\
+Moreover, the use of the \textit{BackPropagation} method and its dependency with the \textit{Newtons Method} (the \textit{Steepest Gradient Descend}) to obtain zeros of the \textit{cost function} in the training process, does not ensure that the solution it arrive is the best or, even doe, if it is correct in all cases (and we can be blind in situations were the network was not tested).
+\subsection{Observations of the results}
+To sump up all the results and conlusions obtained in the studies we can conclud if theres enough evidence of the proposal.\\
+\rule{\linewidth}{0.4pt}
+\begin{itemize}
+    \item \textbf{Proposal:} If there is enough information about the system to model, exists an eficient neural network which architecture can be obtained using rules.
+\end{itemize}
+\rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
+To verify the viability of the proposal needed to acomplish the following conditions:
+\newpage
+\begin{enumerate}
+    \item \underline{All periodically functions can be approximated as a convination of sinus functions.}\\
+    The first contidion can be proven usen \textit{Fourier series}\\
+    However, its important to mention that a periodical function such as $\tan{x}$ can not be approximated due to the asymptoties. 
+    Therefore could exist a periodical function that can be modeled with $\sin$ functions because it requeres that can hadle asymptoties.\\
+    \item \underline{All polinomical functions can be approximated as a convination of lineal functions.}\\
+    Such as the first condition, the second one can be proven using \textit{Taylor Series}, not having a possible counter part that do not apply.\\
+    \item \underline{All irrational functions can be approximated as a convination of irrational functions.}\\
+    The point 3 can be explained using the condition that we are tryiung to approximate a function un a certain interval. Therefore iy can be obtained the following deduction:\\
+    \rule{\linewidth}{0.4pt}
+    \begin{itemize}
+        \item \textbf{Deduction:} Approximation of irration functions.\\
+        Being $f_n:\mathbb{R}\rightarrow\mathbb{R}$, $g:\mathbb{R}\rightarrow\mathbb{R}$ where $f_n(x) = \sqrt[n]{x}, \forall n \in \mathbb{N} / n > 1$ and $g(x) = \sqrt{x}$.\\
+        $$ \exists c,d \in \mathbb{R} / \forall x \in [a,b], f_n(x)- g(c\cdot x + d) < \epsilon$$ 
+        Where $\epsilon\in\mathbb{R^+}$ is the error and $\{ c,d \}$ are parameters that ajust $g$ to approximate $f_n$ in the interval $[a,b]\cup \mathbb{R}$.
+    \end{itemize}
+    \rule{\linewidth}{0.4pt}\\
+    Nevertheless, mention that when $n$ (the degree of the root) is even the interval needs to be in the set $\mathbb{R^+}$. Moreover, this deduction can handle situations when the set of functions $f_n$ are defined as $f(x)_n = \alpha \sqrt[n]{x} + \beta$ where the parameters $\alpha,\beta \in \mathbb{R}$ \\
+    This deduction can also be demostrated using tangency:\\
+    \rule{\linewidth}{0.4pt}
+    \begin{itemize}
+        \item \textbf{Demostration:} Approximation of irration functions.\\
+        Being $f_n:\mathbb{R}\rightarrow\mathbb{R}$, $g:\mathbb{R}\rightarrow\mathbb{R}$ where $f_n(x) = \sqrt[n]{x}, \forall n \in \mathbb{N} / n > 1$ and $g(x) = \sqrt{x}$.\\
+        Being $P=(p_0, p_1) / p_0 = \frac{a+b}{2}, p_1 = f_n(p_0)$, $\exists c,d\in\mathbb{R} / g(c\cdot p_0 + d) = p_1$.
+        Therefore, 
+        $$\exists (\alpha, \beta) \subset [a,b] / p_0 = \frac{\alpha + \beta}{2} \text{ where } \forall x \in (\alpha, \beta), f_n(x) - g(c\cdot x + d) < \epsilon$$
+        $\epsilon\in\mathbb{R^+}$ the error.
+    \end{itemize}
+    \rule{\linewidth}{0.4pt}\\
+    These demostration could be use for every function, not limiting them only for irrational functions.
+\end{enumerate}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item \underline{The mencioned functions can be modeled using a particular architecture.}
+    \item \underline{Exists a determined minimum number of data to train the neural network.}
+\end{enumerate}
+
+
 \subsection{Conclusions}
 
 

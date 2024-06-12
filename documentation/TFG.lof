@@ -1,0 +1,48 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Schema of the Perceptron neuron\relax }}{3}{figure.caption.9}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Schema of the Multilayer perceptron\relax }}{3}{figure.caption.10}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Results of diferents architectures approximating the function \textit {sin}\relax }}{6}{figure.caption.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model 1-1-1-1}}}{6}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MSE 1-1-1-1}}}{6}{subfigure.3.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Model 1-1-2-1}}}{6}{subfigure.3.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {MSE 1-1-2-1}}}{6}{subfigure.3.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Model 1-1-3-1}}}{6}{subfigure.3.5}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {MSE 1-1-3-1}}}{6}{subfigure.3.6}%
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Model 1-2-2-1}}}{6}{subfigure.3.7}%
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {MSE 1-2-2-1}}}{6}{subfigure.3.8}%
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Model 1-2-4-1}}}{6}{subfigure.3.9}%
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {MSE 1-2-4-1}}}{6}{subfigure.3.10}%
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {Model 1-4-2-1}}}{6}{subfigure.3.11}%
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {MSE 1-4-2-1}}}{6}{subfigure.3.12}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Architectures that improves the modelation of \textit {sin} function\relax }}{7}{figure.caption.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model 1-2-4-1}}}{7}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MSE 1-2-4-1}}}{7}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Model 1-4-4-1}}}{7}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {MSE 1-4-4-1}}}{7}{subfigure.4.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Results of diferents architectures approximating the functions $x^2$ and $x^3$\relax }}{8}{figure.caption.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\centering Model\\1-1-1-1}}}{8}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\centering MSE\\1-1-1-1}}}{8}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {\centering Model\\1-2-1-1}}}{8}{subfigure.5.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {\centering MSE\\1-2-1-1}}}{8}{subfigure.5.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {\centering Model\\1-2-2-1}}}{8}{subfigure.5.5}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {\centering MSE\\1-2-2-1}}}{8}{subfigure.5.6}%
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {\centering Model\\1-1-1-1}}}{8}{subfigure.5.7}%
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {\centering MSE\\1-1-1-1}}}{8}{subfigure.5.8}%
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {\centering Model\\1-2-1-1}}}{8}{subfigure.5.9}%
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {\centering MSE\\1-2-1-1}}}{8}{subfigure.5.10}%
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {\centering Model\\1-2-2-1}}}{8}{subfigure.5.11}%
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {\centering MSE\\1-2-2-1}}}{8}{subfigure.5.12}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Results of diferents architectures approximating the function $\sqrt {x}$\relax }}{8}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model 1-1-1-1}}}{8}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MSE 1-1-1-1}}}{8}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Model 1-1-2-1}}}{8}{subfigure.6.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {MSE 1-1-2-1}}}{8}{subfigure.6.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Model 1-2-1-1}}}{8}{subfigure.6.5}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {MSE 1-2-1-1}}}{8}{subfigure.6.6}%
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Model 1-3-1-1}}}{8}{subfigure.6.7}%
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {MSE 1-3-1-1}}}{8}{subfigure.6.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Architecture $1-2-2-1$ approximation to a jump discontinuity function\relax }}{9}{figure.caption.15}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model}}}{9}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MSE}}}{9}{subfigure.7.2}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Architecture $1-5-5-1$ approximation to $\tan {x}$ function\relax }}{10}{figure.caption.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Model}}}{10}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MSE}}}{10}{subfigure.8.2}%
