@@ -4,5 +4,5 @@
 #include "MLP.h"
 
 void feedforward(NeuralNetwork *network, double input);
-void backpropagation(NeuralNetwork *network, double delta, double error);
+void backpropagation(NeuralNetwork *network, double delta, double weight, double lr);
 

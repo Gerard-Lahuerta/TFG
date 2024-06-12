@@ -32,7 +32,8 @@ int number_to_roman(int num){
 
 
 int main() {
-    int i, res, max_value = 400;
+    int i, max_value = 40;
+    double res;
     FILE *file;
     file = fopen("data/roman.csv", "w+"); // Abre el archivo para escritura
 
@@ -44,9 +45,9 @@ int main() {
     fprintf(file, "Value; Result\n");
 
     for (i = 1; i < max_value; i++) {
-        res = number_to_roman(i);
+        res = number_to_roman(i)/10.0;
         // printf("%d-%d\n",i,res);
-        fprintf(file, "%d;%d\n", i, res);
+        fprintf(file, "%d;%lf\n", i, res);
     }
 
     fclose(file);

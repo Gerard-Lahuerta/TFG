@@ -36,14 +36,15 @@ void feedforward(NeuralNetwork *network, double input) {
     }
 }
 
-void backpropagation(NeuralNetwork *network, double delta, double error) {
+void backpropagation(NeuralNetwork *network, double delta, double weight, double lr) {
 
     unsigned i,j,k;
+    double error;
     ActivationFunction activation_function_derivative = network->activation_function_derivative;
 
     // Calculate deltas for the output layer
     for (i = 0; i < network->output_size; i++) {
-        network->output_layer.neurons[i].delta = error*delta;// loss_derivative(expected_output, network->output_layer.neurons[i].output); 
+        network->output_layer.neurons[i].delta = weight*delta;// loss_derivative(expected_output, network->output_layer.neurons[i].output); 
     }
 
     // Calculate deltas for the hidden layer
@@ -83,11 +84,11 @@ void backpropagation(NeuralNetwork *network, double delta, double error) {
             Neuron *neuron = &network->hidden_layer[k].neurons[i];
 
             for (j = 0; j < (k == 0 ? network->input_size : network->hidden_size); j++) {
-                if (!k) neuron->weights[j] += LEARNING_RATE * neuron->delta * network->input_layer.neurons[j].output;
-                else neuron->weights[j] += LEARNING_RATE * neuron->delta * network->hidden_layer[k - 1].neurons[j].output;
+                if (!k) neuron->weights[j] += lr * neuron->delta * network->input_layer.neurons[j].output;
+                else neuron->weights[j] += lr * neuron->delta * network->hidden_layer[k - 1].neurons[j].output;
             }
 
-            neuron->bias += LEARNING_RATE * neuron->delta;
+            neuron->bias += lr * neuron->delta;
         }
     }
 }

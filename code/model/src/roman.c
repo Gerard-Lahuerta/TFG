@@ -23,7 +23,7 @@ int main() {
     NeuralNetwork sqr = create_network(1, 3, 1, 1, loss_derivative, activation_function, activation_function_derivative);
 
     NeuralNetwork network[4] = {sin1, sin2, sin3, sqr};
-    double weights[4] = {4,3,2,1};
+    double weights[4] = {-10,-5,-2,1};
     double bias = 0, delta;
     char N_networks = 4;
 
@@ -35,7 +35,7 @@ int main() {
 
 
     // Variables
-    unsigned epoch;
+    unsigned epoch, epochs = 1000000;
     double input, expected_output, res, mse = 0;
     FILE* log_file = fopen(log_name,"w+");
     FILE* output_file = fopen(output,"w+");
@@ -43,7 +43,9 @@ int main() {
     unsigned order[data_size];
     for ( i = 0; i < data_size; i++) order[i] = i;
 
-    for (epoch = 0; epoch < EPOCHS; epoch++) {
+    double lr = 0.0001;
+
+    for (epoch = 0; epoch < epochs; epoch++) {
         randomize(order, data_size);
         for (i = 0; i < data_size; i++) {
             index = order[i];
@@ -59,17 +61,14 @@ int main() {
 
             for(j = 0; j < N_networks; j++){
                 delta = loss_derivative(expected_output, res);
-                backpropagation(&network[j], delta, weights[j]*loss(expected_output, res));
-
-                    for (j = 0; j < N_networks; j++) {
-                        weights[j] += LEARNING_RATE * delta * network[j].output_layer.neurons[0].output;
-                    }
-
-                    bias += LEARNING_RATE * delta;
+                backpropagation(&network[j], delta, weights[j], lr);
+                weights[j] += lr * delta * network[j].output_layer.neurons[0].output * loss(expected_output, res);
+                //bias += LEARNING_RATE * delta;
             }
 
-        if (LOG_ENABLED) LOG(epoch+1, loss(expected_output, res), log_file);
         }
+        if (LOG_ENABLED) LOG(epoch+1, loss(expected_output, res), log_file);
+        // if (epoch%10) lr/=10;
     }
 
     fclose(log_file);
@@ -90,6 +89,7 @@ int main() {
     printf("MSE: %lf\n", mse);
 
     for(j = 0; j < N_networks; j++){
+        printf("wheight %d --> %lf\n",j,weights[j]);
         free(network[j].input_layer.neurons);
         for (i = 0; i < N_HIDDEN; i++) free(network[j].hidden_layer[i].neurons);
         free(network[j].output_layer.neurons);
