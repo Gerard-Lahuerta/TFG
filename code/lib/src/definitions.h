@@ -10,7 +10,7 @@
 #define OUTPUT_SIZE 1
 #define N_HIDDEN 5
 #define LEARNING_RATE 0.1
-#define EPOCHS 10000
+#define EPOCHS 100
 
 typedef double (*CostFunction)(double expected_output, double actual_output);
 typedef double (*ActivationFunction)(double value);

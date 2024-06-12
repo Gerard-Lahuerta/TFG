@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.3.26)  12 JUN 2024 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.3.26)  12 JUN 2024 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1040,6 +1040,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 455--457
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
+
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1047,7 +1052,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 489.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 507--508
+[][] 
+ []
+
+
+LaTeX Warning: Reference `romans' on page 13 undefined on input line 520.
+
+<img/roman/roman(49).png, id=295, 481.8pt x 361.35pt>
+File: img/roman/roman(49).png Graphic file (type png)
+<use img/roman/roman(49).png>
+Package pdftex.def Info: img/roman/roman(49).png  used on input line 523.
+(pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
+<img/roman/roman(99).png, id=296, 481.8pt x 361.35pt>
+File: img/roman/roman(99).png Graphic file (type png)
+<use img/roman/roman(99).png>
+Package pdftex.def Info: img/roman/roman(99).png  used on input line 524.
+(pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
+<img/roman/roman(399).png, id=297, 481.8pt x 361.35pt>
+File: img/roman/roman(399).png Graphic file (type png)
+<use img/roman/roman(399).png>
+Package pdftex.def Info: img/roman/roman(399).png  used on input line 525.
+(pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13 <./img/roman/roman(49).png> <./img/roman/roman(99).png> <./img/roman/roman(399).png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 538.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -1058,7 +1101,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12] (./TFG.aux)
+[14] (./TFG.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1072,21 +1115,21 @@ Package rerunfilecheck Warning: File `TFG.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `TFG.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3CB59AF45CF7E9DE9ECB2906B45986C0;3513.
+(rerunfilecheck)             After:  7470E50410DA0E26D5C3D5D20CD8D39A;4353.
  ) 
 Here is how much of TeX's memory you used:
- 14808 strings out of 476091
- 237762 string characters out of 5794081
+ 14840 strings out of 476091
+ 238437 string characters out of 5794081
  1871330 words of memory out of 5000000
- 34807 multiletter control sequences out of 15000+600000
+ 34826 multiletter control sequences out of 15000+600000
  532281 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,453b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,453b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc2488.pfb>
-Output written on TFG.pdf (18 pages, 900048 bytes).
+Output written on TFG.pdf (20 pages, 937258 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 117 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

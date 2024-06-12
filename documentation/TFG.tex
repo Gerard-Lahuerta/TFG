@@ -474,12 +474,61 @@ To verify the viability of the proposal needed to acomplish the following condit
 \end{enumerate}
 \begin{enumerate}
     \setcounter{enumi}{3}
-    \item \underline{The mencioned functions can be modeled using a particular architecture.}
-    \item \underline{Exists a determined minimum number of data to train the neural network.}
+    \item \underline{The mencioned functions can be modeled using a particular architecture.}\\
+    The studies about the differents architectures of the diferents functions ($x^2, \sin{x}, \sqrt{x}$) shows that exist a diferenciable minimum architecture that approximate the best each function.\\
+    \item \underline{Exists a determined minimum number of data to train the neural network.}\\
+    That point is controversial. In all the studies perfom the number of data available where diferents  with at least $200$ registers. However, the rellevant part about this is that it really needs a deterministic process that generates the dataset.\\
+    Te minim information that is required is the determinmistic process intrinsecly. If there is no deterministic process the information needed will not be enough despite how many it could recap.\\
+    This is consecuence of the backpropagation method and its dependency in the \textit{Steepest Gradient Descend}. If there is no "correct" model to compare and interpretate the functionability of the network it is not possible to "extract theoretically the best architecture".\\
+    Hence, there is no "minim number of samples" despite there is a necessary existance of a (deterministic) \textit{non-black box}\footnote{A \textit{black box} model is a process where the internal operations and functionability of it can not be interpretated partially or at all, giving the aspect of being a non undertanable or/and verified model.} method.
 \end{enumerate}
+Concluding the observations, the studies give the enough evidence of the proposal.\\
+To give more evidence of that proof, an experimental process will be done to extract th best minimal architecture that approximate a deterministic process.\\
+Moreover, a efficiency test will be also perfomed to ensure that neural networks in colaboration with the information that gives the deterministic process improves the computation time it needs.
 
+\section{Neural Network for arabic and roman numbers}
+The idea about that topic is the following, any natural number (normally written in the arabic form) can be expressed as a roman number. This process is a sequence of fixed rules that repeated in steeps give the result (it is a deterministic process).\\
+As is a deterministic function ensure the existence of a function that models the process, but this function is unknown.\\
+The main objective is, with the observation  and the proposal done before, create a neural netqwork that approximates this unkown function.
 
-\subsection{Conclusions}
+\subsection{Preprocess of data and reduction of variables}
+The main problem when tracting with roman numbers is that is a sequence of diferents characters that can not be handle easily. Therefore a simplification was perfomed.\\
+\rule{\linewidth}{0.4pt}
+    \begin{itemize}
+        \item \textbf{Application:} Interpretation of Roman numbers.\\
+        Being the set $C_n = \{c_0, \cdots, c_{n-1} \}$ where $\forall c \in C_n$ is a roman number.\\ 
+        Lets define that each $\forall c \in C_n$ are formet by two characters: $c = (a,b)$, where $b$ is a letter of the roman number system, the set $\{I, V, X, C, \cdots \}$, and $a$ the element in the roman number system just one or two positions before which is $b$ or $\varnothing$.\\
+        Using this asumption we can write very needed number, for example the element\\
+        $c = (I,V) \equiv 4$ and the sequence $C_3 = \{ (\varnothing, X), (\varnothing, X), (I,V) \} \equiv 24$.
+    \end{itemize}
+\rule{\linewidth}{0.4pt}\\
+With this interpretation and definition of the roman numbers set and its properties, another application can be done.
+\newpage
+\rule{\linewidth}{0.4pt}
+    \begin{itemize}
+        \item \textbf{Application:} Reduction of liberty degrees function.\\
+        Using the previous definition of the \textit{Roman numbers set}, it is possible to create a function $f:\{C_n\}\rightarrow \mathbb{Z}, \forall n \in \mathbb{N}$.\\
+        Before defining this function its esentially assign to each letter of the Roman number system a number (for example its position in the alphabet starting with $A\equiv1$ and defining $\varnothing \equiv 0$).\\
+        This method allow us to represent the example sequence used before as a set of numbers: 
+        $$C_3 = \{ (\varnothing, X), (\varnothing, X), (I,V) \} \equiv \{ (0,24), (0,24), (9,22) \} \equiv 24$$
+        Now we can create the function $f:C_n\rightarrow \mathbb{Z}, \forall n \in \mathbb{N}$ as:
+        $$ f(C_n) = \sum_{i = 0}^{n-1} b_i-a_i, \text{ where } c_i = (a_i, b_i) $$
+    \end{itemize}
+\rule{\linewidth}{0.4pt}\\
+This application allow to represent each roman number in one arabioc number (but does not ensure that this process satisfy the injection property).\\
+The important about this process is that we can represent each natural number expresed in arabic with another number (in the integers) in arabic which is equivalent as, at least one, roman number.\\
+In consecuence, it can be represented graphically in $\mathbb{R}^2$. This representation is shown in \ref{romans}.
+\begin{figure}[h]
+    \centering
+    \subfloat[1 to 49]{\includegraphics[width=0.3\linewidth]{img/roman/roman(49).png}}
+    \subfloat[1 to 99]{\includegraphics[width=0.3\linewidth]{img/roman/roman(99).png}}
+    \subfloat[1 to 399]{\includegraphics[width=0.3\linewidth]{img/roman/roman(399).png}}
+    \caption{Distribution of the associated arabic number to the roman natural number}
+    \label{romans}
+\end{figure}\\
+The function distribution that appears is the result of applying the function defined to the deterministic rules of roman numbers, therefore there is no knowledge of which is the function behind this process.\\
+However is an ideal case to use the experimental observation and try to obtain with the dataset given by the deterministic method a function that approximates the distribution of the dataset.
+\subsection{Analisis of the dataset and creation of the neural network} 
 
 
 
