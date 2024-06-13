@@ -164,6 +164,10 @@ Thank you all for everything.
 \listoffigures
 \listoftables
 
+\section*{Preface}
+This report is an ambicious proyect that has been develop during month and have been meditated even more, which in all the process each piece and each results obtained remarks the viability of this type of methodologies to improve the task of neural network develop and how it can be implemented to solve problem that have high computational cost.
+
+
 
 \newpage \pagestyle{extended_plain}
 \setcounter{page}{2}
@@ -558,45 +562,67 @@ Also comment that the scale of the distribution has been decrease in one order o
     \begin{minipage}{5.5cm}
         \begin{center}
             \includegraphics[width = 1 \linewidth]{img/roman/roman_third_approach.png}
-            \caption{}
+            \caption{Improvement of the sub-network capabilities to approach the distribution of roman numbers}
             \label{second-approach}
         \end{center}
     \end{minipage} \hspace{1em}
     \begin{minipage}{9cm}
         If the test is repeated with 4 sub-networks with architectures $1-2-4-1$, introducing the learning rate reduction by one order of magnitude each time the number of epochs done increases it order of magnitude and $10000$ epochs the results obtained perfoms a better approach, as can be seen in \ref{second-approach}.\\
         From the figure it is possible to deduce that the critical number of sub-networks has not been obtained yet. Moreover, observing the graph another conclusion can be made; the number of epochs is not enought.\\
-        To obtain a usefull solution and (at least) an upper bound to the problem, and "overkill" architecure will be testes. 
+        Nevertheless, it is possible that the model is more complex that it should be.
     \end{minipage}
-\end{figure}
+\end{figure}\\
+Studying the distribution and behavior of the roman numbers, it can be deduce that it has a 3 subperiods.\\
+The first period occurs when the number ends in $4$, the second when the number ends in $9$ and the thrid period is when the number starts with $4$ or $9$.\\
+In all this three cases the behavior of the function changes (decreassing or increassing the following value much more than it would expect with in its tendency). Using this information can be consider that the exact amount of subnetworks of the type $1-2-4-1$ to perfom the best relation with precision-efficiency is $3$ (one for each period).  
 \begin{figure}[h]
     \begin{minipage}{5.5cm}
         \begin{center}
-            \includegraphics[width = 1 \linewidth]{img/roman/roman_third_approach.png}
-            \caption{}
+            \includegraphics[width = 1 \linewidth]{img/roman/roman_over_kill.png}
+            \caption{Final architecture proposed to approach the distribution of roman numbers}
             \label{overkill-approach}
         \end{center}
     \end{minipage} \hspace{1em}
     \begin{minipage}{9cm}
-        In this approach the number of epochs has been increased to $10^9$ epochs and includes $15$ sub-networks with architectures $1-2-4-1$.\\
-        The results obtained in \ref{overkill-approach} are ......
+        In this approach the number of epochs has been increased to $10^6$ epochs and includes $3$ sub-networks with architectures $1-2-4-1$.\\
+        The results obtained in \ref{overkill-approach} are not as good as was expected but give the best precission at the moment.\\
+        However, until now there is not enough precission to consider any of this architectures a good candidate to approximate the distribution of the roman numbers.\\
     \end{minipage}
-\end{figure}
+\end{figure}\\
+Nevertheless, all this unexpected non-approximation of the function could be caused by the unkown correct values of necessary epochs and/or learning rate.\\
+This problem could not be solve using the proposal and gives problems when planing the correct architecture for modeling a process.\\
+Therefore, as it is impossible to perfom a comparation between results of the methods due the unprecission of the models, a analisis of training cost have to be done to verify if it is practical to make improvements in the process to allow the models to be train with more capabilities (such as paralelization using GPU, improvements of the neural network code or more data an training time). 
+
 \subsection{Efficiency and time-cost results}
-To sum up all four tests done we can reflex its results in the table \ref{efficiency-table}.
+To sum up all four tests done we can reflex its results\footnote{All the results, studies and figures that have been shown/mention in the report where using a Raspberry PI 4 to ensure that the computational cost and time process can be comprated without any problems of diferents capabilities.} in the table \ref{efficiency-table}.\\
 \begin{table}[h]
     \centering
     \begin{tabular}{c|c|c|c|c|c}
         Sub-networks & Architecture & Epochs & Learning rate & Training time & Mean MSE\\\hline\hline
-        3 & $1-2-2-1$ & $10^3$ & 0.01 & & 4.09 \\\hline
-        4 & $1-2-2-1$ & $10^3$ & $\{10^{-2}, 10^{-3}\}$ & & 2.96 \\\hline
-        4 & $1-2-4-1$ & $10^5$ & $\{10^{-(2+i)}\}_{i=0}^{2}$& & 0.87 \\\hline
-        15 & $1-2-4-1$ & $10^9$ & $\{10^{-(3+2i)}\}_{i=0}^{3}$& & \\
+        3 & $1-2-2-1$ & $10^3$ & 0.01 & 1.03" & 4.09 \\\hline
+        4 & $1-2-2-1$ & $10^3$ & $\{10^{-2}, 10^{-3}\}$ & 1.70" & 2.96 \\\hline
+        4 & $1-2-4-1$ & $10^5$ & $\{10^{-(2+i)}\}_{i=0}^{2}$& 2'1.04" & 0.87 \\\hline
+        3 & $1-2-4-1$ & $10^6$ & $\{10^{-(3+2i)}\}_{i=0}^{3}$& 10'17.55" &  0.14\\
     \end{tabular}
-    \caption{}
+    \caption{Analisis of cost and efficiency about the diferent architectures develop}
     \label{efficiency-table}
 \end{table}
+It can be observe that the training models used are quite good taking in account that the epochs are "relativelly low". Also mention that the "sixe" of the architecture is not as big as normally MLPs are done to approach this types of problems.\\
+Therefore it can be considered an evidence that the proposal made as a set of "considerations" to develop neural networks could be verified in other dimentions and consolidated as a theorem if it is possible to proof its properties.\\
+In the worst escenario, the study has shown that knwoing the process behind a model can be used as a sustain to create neural networks experts in solving this process (which could perfom a fixed amount of operations to develop a tasck which, in its deterministic process of calculation, will not be able to determine or even have the solution in a properly amount of time).
 
-
+\section{Conclusions}
+Despite all the objectives initially planned have been achive:
+\begin{enumerate}
+    \item Develop neural networks using C language coding.
+    \item Propose a possible improvement of how neural networks can be designed.
+    \item Verify that The \textbf{Universal Approximation Theorem} definition can be expanded and used in cases that theoretically it should not be able.
+    \item Propose a neural network using the obtained proposal that approximates a deterministic process.
+\end{enumerate} 
+The most challenging objective, be able to improve the time process for a deterministic process using a neural network, was not achive.\\
+However, during the study it has been shown that exists enough evidence that this challenge can be done with a better perfomance and analisis of the deterministic process.\\
+It is unfare not mention that the deterministic process selected to verify the improvements of applying neural networks could have been as easy tasck as it have though and with another deterministic process this verification objective could be obteined muich more easily.\\
+Also emphasize the diferents proposals done during the study as can be an initial point for future studies and encourage to take it as a starting point to develop better proposals and correct any possible mistakes that could be done and not taking in consideration.\\
 
 \newpage
 \begin{thebibliography}{X}
