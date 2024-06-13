@@ -28,12 +28,12 @@ int main() {
     double** dataset = read_dataset(dataset_file, &data_size);
 
     for(i = 0; i < N_networks; i++){
-        network[i] = create_network(1, 4, 2, 1, loss_derivative, activation_function, activation_function_derivative);
-        weights[i] = -(i+1);///N_networks;
+        network[i] = create_network(1, 2, 4, 1, loss_derivative, activation_function, activation_function_derivative);
+        weights[i] = (rand() % N_networks)/N_networks;
     }
 
     // Variables
-    unsigned epoch, epochs = 100000, red = 1000;
+    unsigned epoch, epochs = 1000000, red = 1000;
     double input, expected_output, res, mse = 0;
     FILE* log_file = fopen(log_name,"w+");
     FILE* output_file = fopen(output,"w+");
@@ -41,7 +41,7 @@ int main() {
     unsigned order[data_size];
     for ( i = 0; i < data_size; i++) order[i] = i;
 
-    double lr = 0.01;
+    double lr = 1;
 
     for (epoch = 0; epoch < epochs; epoch++) {
         randomize(order, data_size);
@@ -61,13 +61,13 @@ int main() {
                 delta = loss_derivative(expected_output, res);
                 backpropagation(&network[j], delta, weights[j], lr);
                 weights[j] += lr * delta * network[j].output_layer.neurons[0].output * loss(expected_output, res);
-                bias += LEARNING_RATE * delta;
+                // bias += LEARNING_RATE * delta;
             }
 
-            if (epoch == red){ lr/= 10; red*=100;}
 
         }
         if (LOG_ENABLED) LOG(epoch+1, loss(expected_output, res), log_file);
+        if (epoch == red){ lr/= 10; red*=10;}
         // if (epoch%10) lr/=10;
     }
 

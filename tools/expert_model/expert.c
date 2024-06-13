@@ -45,7 +45,7 @@ int main() {
     fprintf(file, "Value; Result\n");
 
     for (i = 1; i < max_value; i++) {
-        res = number_to_roman(i)/10.0;
+        res = number_to_roman(i)/100.0;
         // printf("%d-%d\n",i,res);
         fprintf(file, "%d;%lf\n", i, res);
     }
