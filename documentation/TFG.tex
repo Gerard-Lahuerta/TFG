@@ -141,13 +141,10 @@
 \newpage 
 
 % PRE SECTIONS
-\addcontentsline{toc}{section}{Declaration of Authorship}
 \section*{Declaration of Authorship}
 \newpage
-\addcontentsline{toc}{section}{Abstract}
 \section*{Abstract}
 \newpage
-\addcontentsline{toc}{section}{Acknowledgements}
 \section*{Acknowledgements}
 I would like to express my gratitude to my family for their support throughout my thesis, degree, and my entire life.\\
 \textcolor{white}{a}\\
@@ -165,11 +162,7 @@ Thank you all for everything.
 % CONTENTS
 \tableofcontents
 \listoffigures
-
-
-\newpage
-\addcontentsline{toc}{section}{Preface}
-\section*{Preface}
+\listoftables
 
 
 \newpage \pagestyle{extended_plain}
@@ -486,7 +479,7 @@ Concluding the observations, the studies give the enough evidence of the proposa
 To give more evidence of that proof, an experimental process will be done to extract th best minimal architecture that approximate a deterministic process.\\
 Moreover, a efficiency test will be also perfomed to ensure that neural networks in colaboration with the information that gives the deterministic process improves the computation time it needs.
 
-\section{Neural Network for arabic and roman numbers}
+\section{Arabic to roman numbers}
 The idea about that topic is the following, any natural number (normally written in the arabic form) can be expressed as a roman number. This process is a sequence of fixed rules that repeated in steeps give the result (it is a deterministic process).\\
 As is a deterministic function ensure the existence of a function that models the process, but this function is unknown.\\
 The main objective is, with the observation  and the proposal done before, create a neural netqwork that approximates this unkown function.
@@ -504,7 +497,7 @@ The main problem when tracting with roman numbers is that is a sequence of difer
 \rule{\linewidth}{0.4pt}\\
 With this interpretation and definition of the roman numbers set and its properties, another application can be done.
 \newpage
-\rule{\linewidth}{0.4pt}
+\hspace{-1.3em}\rule{\linewidth}{0.4pt}
     \begin{itemize}
         \item \textbf{Application:} Reduction of liberty degrees function.\\
         Using the previous definition of the \textit{Roman numbers set}, it is possible to create a function $f:\{C_n\}\rightarrow \mathbb{Z}, \forall n \in \mathbb{N}$.\\
@@ -529,6 +522,79 @@ In consecuence, it can be represented graphically in $\mathbb{R}^2$. This repres
 The function distribution that appears is the result of applying the function defined to the deterministic rules of roman numbers, therefore there is no knowledge of which is the function behind this process.\\
 However is an ideal case to use the experimental observation and try to obtain with the dataset given by the deterministic method a function that approximates the distribution of the dataset.
 \subsection{Analisis of the dataset and creation of the neural network} 
+The shape of the function shown in \ref{romans} tend to mimic the \textit{Sawtooth wave} but, in this case, it is not exactly periodical.This consecuence (not been periodical) give some problems, because the application of the architecture develop to approximates the periodical functions can not be applied correctlly.\\
+Despite this problem, it is possible to use the architeture develop for periodical functions (tending to approach the \textit{Fourier Serie} of the \textit{Sawthooth wave}) in what seems to be the period of the wave $49$. \\
+Therefore, the neural neural network will have the architecture shown in \ref{roman-architecture}.
+\begin{figure}[h]
+    \begin{minipage}{5.5cm}
+        \begin{center}
+            \includegraphics[width = 1\linewidth]{Neural_Network/roman_architecture.jpg}
+            \caption{Proposal architecture of the neural network that approximates the roman number distribution}
+            \label{roman-architecture}
+        \end{center}
+    \end{minipage}
+    \hspace{1em}
+    \begin{minipage}{9cm}
+        This neural network will be composed by two neurons (one input and one output) that send/recive the information to/from sub-neural networks with the architecture obtained to modelate the $\sin$ function.\\
+        The neural network will be trained with only the first subset of the dataset (number between 0 and 49) and if a bigger number is introduced it only needs to be reduced as the remainder of the division of this number and the period ($49$).\\
+        The important part part of the network is the number of sub-neural networks, the learning rate and the number of epochs that needs to approximate properly the distribution.\\
+        Unfortunately the number of epochs and learning rate can not be deduced until several have been tested.
+    \end{minipage}
+\end{figure}\\
+However, the number of sub-networks could be deduced as the amount needes to approximate the \textit{Fourier Serie} the \textit{Sawthooth wave} with enough precission.\\
+To test and deduce the optimal number of sub-networks and the value of the learnning rate, two first approached have been done, as can be seen in \ref{first-approach}
+\begin{figure}[h]
+    \centering
+    \subfloat[Network with 3 architectures $1-2-2-1$ and fixed learning rate]{\includegraphics[width=0.45\linewidth]{img/roman/roman_first_approach.png}}
+    \hspace{1em}
+    \subfloat[Network with 4 architectures $1-2-2-1$ and decreassing learning rate]{\includegraphics[width=0.45\linewidth]{img/roman/roman_second_approach.png}}
+    \caption{Test of diferents neural networks to approach the distribution of roman numbers}
+    \label{first-approach}
+\end{figure}\\
+The conclusion obtained from this tests is that the simple architecture of the $\sin$ function of $1-2-2-1$ is not enought and could be improven by using the most robust one of $1-2-4-1$.\\
+Moreover, the variable learning rate (decreaseing it value while the epochs increases) adjust better the pics of the distribution. Although, the number of epochs testes (in case of figure \ref{first-approach} $1000$) seems to not being enought.\\
+Also comment that the scale of the distribution has been decrease in one order of magnitude to reduce the ariance between values and help to focus the Backpropagation when training (by reducing the gradient vector and avoid irrational move thought the function cost reduction).
+\begin{figure}[h]
+    \begin{minipage}{5.5cm}
+        \begin{center}
+            \includegraphics[width = 1 \linewidth]{img/roman/roman_third_approach.png}
+            \caption{}
+            \label{second-approach}
+        \end{center}
+    \end{minipage} \hspace{1em}
+    \begin{minipage}{9cm}
+        If the test is repeated with 4 sub-networks with architectures $1-2-4-1$, introducing the learning rate reduction by one order of magnitude each time the number of epochs done increases it order of magnitude and $10000$ epochs the results obtained perfoms a better approach, as can be seen in \ref{second-approach}.\\
+        From the figure it is possible to deduce that the critical number of sub-networks has not been obtained yet. Moreover, observing the graph another conclusion can be made; the number of epochs is not enought.\\
+        To obtain a usefull solution and (at least) an upper bound to the problem, and "overkill" architecure will be testes. 
+    \end{minipage}
+\end{figure}
+\begin{figure}[h]
+    \begin{minipage}{5.5cm}
+        \begin{center}
+            \includegraphics[width = 1 \linewidth]{img/roman/roman_third_approach.png}
+            \caption{}
+            \label{overkill-approach}
+        \end{center}
+    \end{minipage} \hspace{1em}
+    \begin{minipage}{9cm}
+        In this approach the number of epochs has been increased to $10^9$ epochs and includes $15$ sub-networks with architectures $1-2-4-1$.\\
+        The results obtained in \ref{overkill-approach} are ......
+    \end{minipage}
+\end{figure}
+\subsection{Efficiency and time-cost results}
+To sum up all four tests done we can reflex its results in the table \ref{efficiency-table}.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c}
+        Sub-networks & Architecture & Epochs & Learning rate & Training time & Mean MSE\\\hline\hline
+        3 & $1-2-2-1$ & $10^3$ & 0.01 & & 4.09 \\\hline
+        4 & $1-2-2-1$ & $10^3$ & $\{10^{-2}, 10^{-3}\}$ & & 2.96 \\\hline
+        4 & $1-2-4-1$ & $10^5$ & $\{10^{-(2+i)}\}_{i=0}^{2}$& & 0.87 \\\hline
+        15 & $1-2-4-1$ & $10^9$ & $\{10^{-(3+2i)}\}_{i=0}^{3}$& & \\
+    \end{tabular}
+    \caption{}
+    \label{efficiency-table}
+\end{table}
 
 
 

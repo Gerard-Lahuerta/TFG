@@ -50,3 +50,9 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 to 49}}}{13}{subfigure.9.1}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {1 to 99}}}{13}{subfigure.9.2}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {1 to 399}}}{13}{subfigure.9.3}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Proposal architecture of the neural network that approximates the roman number distribution\relax }}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Test of diferents neural networks to approach the distribution of roman numbers\relax }}{14}{figure.caption.19}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Network with 3 architectures $1-2-2-1$ and fixed learning rate}}}{14}{subfigure.11.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Network with 4 architectures $1-2-2-1$ and decreassing learning rate}}}{14}{subfigure.11.2}%
+\contentsline {figure}{\numberline {12}{\ignorespaces \relax }}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {13}{\ignorespaces \relax }}{15}{figure.caption.21}%

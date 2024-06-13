@@ -17,7 +17,7 @@ int main() {
     ActivationFunction activation_function = &sigmoid;
     ActivationFunction activation_function_derivative = &sigmoid_derivative;
 
-    char N_networks = 15;
+    char N_networks = 3;
     NeuralNetwork *network = (NeuralNetwork*) malloc(N_networks * sizeof(NeuralNetwork));
     double *weights = (double*) malloc(N_networks * sizeof(double));
     double bias = 0, delta;
@@ -29,11 +29,11 @@ int main() {
 
     for(i = 0; i < N_networks; i++){
         network[i] = create_network(1, 4, 2, 1, loss_derivative, activation_function, activation_function_derivative);
-        weights[i] = -i/N_networks;
+        weights[i] = -(i+1);///N_networks;
     }
 
     // Variables
-    unsigned epoch, epochs = 1000000000, red = 1000;
+    unsigned epoch, epochs = 100000, red = 1000;
     double input, expected_output, res, mse = 0;
     FILE* log_file = fopen(log_name,"w+");
     FILE* output_file = fopen(output,"w+");
@@ -41,7 +41,7 @@ int main() {
     unsigned order[data_size];
     for ( i = 0; i < data_size; i++) order[i] = i;
 
-    double lr = 0.001;
+    double lr = 0.01;
 
     for (epoch = 0; epoch < epochs; epoch++) {
         randomize(order, data_size);
