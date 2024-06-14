@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1718319994 "/home/gerard/TFG/documentation/TFG.tex" "TFG.pdf" "TFG" 1718320001 2
+["pdflatex"] 1718323501 "/home/gerard/TFG/documentation/TFG.tex" "TFG.pdf" "TFG" 1718323507 2
   "/etc/texmf/web2c/texmf.cnf" 1711456819 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/gerard/TFG/documentation/TFG.tex" 1718319870 48411 47595a36efa2fb041c12e4985b907797 ""
+  "/home/gerard/TFG/documentation/TFG.tex" 1718323493 48285 4a11189bf90226fd56d1a3e1459933ab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm" 1136768653 3072 19a65fbc725cfc66f5a5fc183b9d418b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -161,12 +161,12 @@
   "Neural_Network/perceptron_schema.png" 1716731640 72243 5d428b486a30375e0db143bf4560fdcf ""
   "Neural_Network/roman_architecture.jpg" 1718275895 43998 140b5a76d1f02b2dd4d2008463a1b228 ""
   "PORTADA/UAB.png" 1716731640 93461 47389e659a04ab1cdef64711699317c1 ""
-  "TFG.aux" 1718320000 14276 70272173b4e11850bffb0e5f75a1041d "pdflatex"
-  "TFG.lof" 1718320000 6469 079cbff8675a91011e8c3ce09be9cb0f "pdflatex"
-  "TFG.lot" 1718320000 157 6c862ac315e208663057eea34b426f0e "pdflatex"
-  "TFG.out" 1718320000 4098 b164c370fd381271c3d28caf6ae5e789 "pdflatex"
-  "TFG.tex" 1718319870 48411 47595a36efa2fb041c12e4985b907797 ""
-  "TFG.toc" 1718320000 1845 4518d0bcde7f16604e59a30bb9010f6a "pdflatex"
+  "TFG.aux" 1718323506 14281 60586a1017197ae1ec70de79f22c3e9f "pdflatex"
+  "TFG.lof" 1718323506 6470 7d67e27d92e2832e9dd2f9aab2b97340 "pdflatex"
+  "TFG.lot" 1718323506 158 b7a51f7d5ddce9681a9d93b83cf53652 "pdflatex"
+  "TFG.out" 1718323506 4098 ba4a415ffa4b4d3f330147718e8c6c2b "pdflatex"
+  "TFG.tex" 1718323493 48285 4a11189bf90226fd56d1a3e1459933ab ""
+  "TFG.toc" 1718323506 1845 8e7065e4b64455042c9c5787c5340629 "pdflatex"
   "img/disc/disc-1-2-2-1.png" 1718116912 5702 7ef139170acbac0a87a92a8eb07cc4a8 ""
   "img/disc/disc-loss-1-2-2-1.png" 1718117030 7480 a3f531122382dd863cd1c918b7189a6c ""
   "img/disc/tan-1-5-5-1.png" 1718131434 4930 5ec2ea63ca6e952ff4b25d5f3a6335a5 ""

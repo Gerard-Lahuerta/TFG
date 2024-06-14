@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.3.26)  14 JUN 2024 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.3.26)  14 JUN 2024 01:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,7 +683,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.265 \subsection
+l.266 \subsection
                  {Hypotesis and Proposal} [4]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -698,89 +698,89 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.287 \newpage
+l.288 \newpage
                [5]
 <img/sin/sin-1-1-1-1.png, id=233, 481.8pt x 361.35pt>
 File: img/sin/sin-1-1-1-1.png Graphic file (type png)
 <use img/sin/sin-1-1-1-1.png>
-Package pdftex.def Info: img/sin/sin-1-1-1-1.png  used on input line 303.
+Package pdftex.def Info: img/sin/sin-1-1-1-1.png  used on input line 304.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-1-1-1.png, id=234, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-1-1-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-1-1-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-1-1-1.png  used on input line 304.
+Package pdftex.def Info: img/sin/sin-loss-1-1-1-1.png  used on input line 305.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-1-2-1.png, id=235, 481.8pt x 361.35pt>
 File: img/sin/sin-1-1-2-1.png Graphic file (type png)
 <use img/sin/sin-1-1-2-1.png>
-Package pdftex.def Info: img/sin/sin-1-1-2-1.png  used on input line 306.
+Package pdftex.def Info: img/sin/sin-1-1-2-1.png  used on input line 307.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-1-2-1.png, id=236, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-1-2-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-1-2-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-1-2-1.png  used on input line 307.
+Package pdftex.def Info: img/sin/sin-loss-1-1-2-1.png  used on input line 308.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-1-3-1.png, id=237, 481.8pt x 361.35pt>
 File: img/sin/sin-1-1-3-1.png Graphic file (type png)
 <use img/sin/sin-1-1-3-1.png>
-Package pdftex.def Info: img/sin/sin-1-1-3-1.png  used on input line 309.
+Package pdftex.def Info: img/sin/sin-1-1-3-1.png  used on input line 310.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-1-3-1.png, id=238, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-1-3-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-1-3-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-1-3-1.png  used on input line 310.
+Package pdftex.def Info: img/sin/sin-loss-1-1-3-1.png  used on input line 311.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-2-2-1.png, id=239, 481.8pt x 361.35pt>
 File: img/sin/sin-1-2-2-1.png Graphic file (type png)
 <use img/sin/sin-1-2-2-1.png>
-Package pdftex.def Info: img/sin/sin-1-2-2-1.png  used on input line 312.
+Package pdftex.def Info: img/sin/sin-1-2-2-1.png  used on input line 313.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-2-2-1.png, id=240, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-2-2-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-2-2-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-2-2-1.png  used on input line 313.
+Package pdftex.def Info: img/sin/sin-loss-1-2-2-1.png  used on input line 314.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-2-4-1.png, id=241, 481.8pt x 361.35pt>
 File: img/sin/sin-1-2-4-1.png Graphic file (type png)
 <use img/sin/sin-1-2-4-1.png>
-Package pdftex.def Info: img/sin/sin-1-2-4-1.png  used on input line 315.
+Package pdftex.def Info: img/sin/sin-1-2-4-1.png  used on input line 316.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-2-4-1.png, id=242, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-2-4-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-2-4-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-2-4-1.png  used on input line 316.
+Package pdftex.def Info: img/sin/sin-loss-1-2-4-1.png  used on input line 317.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-4-2-1.png, id=243, 481.8pt x 361.35pt>
 File: img/sin/sin-1-4-2-1.png Graphic file (type png)
 <use img/sin/sin-1-4-2-1.png>
-Package pdftex.def Info: img/sin/sin-1-4-2-1.png  used on input line 318.
+Package pdftex.def Info: img/sin/sin-1-4-2-1.png  used on input line 319.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-4-2-1.png, id=244, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-4-2-1.png Graphic file (type png)
 <use img/sin/sin-loss-1-4-2-1.png>
-Package pdftex.def Info: img/sin/sin-loss-1-4-2-1.png  used on input line 319.
+Package pdftex.def Info: img/sin/sin-loss-1-4-2-1.png  used on input line 320.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-4-2-1(200).png, id=246, 481.8pt x 361.35pt>
 File: img/sin/sin-1-4-2-1(200).png Graphic file (type png)
 <use img/sin/sin-1-4-2-1(200).png>
-Package pdftex.def Info: img/sin/sin-1-4-2-1(200).png  used on input line 328.
+Package pdftex.def Info: img/sin/sin-1-4-2-1(200).png  used on input line 330.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-4-2-1(200).png, id=247, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-4-2-1(200).png Graphic file (type png)
 <use img/sin/sin-loss-1-4-2-1(200).png>
 Package pdftex.def Info: img/sin/sin-loss-1-4-2-1(200).png  used on input line 
-329.
+331.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-1-4-4-1(200).png, id=248, 481.8pt x 361.35pt>
 File: img/sin/sin-1-4-4-1(200).png Graphic file (type png)
 <use img/sin/sin-1-4-4-1(200).png>
-Package pdftex.def Info: img/sin/sin-1-4-4-1(200).png  used on input line 331.
+Package pdftex.def Info: img/sin/sin-1-4-4-1(200).png  used on input line 333.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sin/sin-loss-1-4-4-1(200).png, id=249, 481.8pt x 361.35pt>
 File: img/sin/sin-loss-1-4-4-1(200).png Graphic file (type png)
 <use img/sin/sin-loss-1-4-4-1(200).png>
 Package pdftex.def Info: img/sin/sin-loss-1-4-4-1(200).png  used on input line 
-332.
+334.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 
 
@@ -796,7 +796,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 \begin{itemize}
+l.342 \begin{itemize}
                       [6 <./img/sin/sin-1-1-1-1.png> <./img/sin/sin-loss-1-1-1-
 1.png> <./img/sin/sin-1-1-2-1.png> <./img/sin/sin-loss-1-1-2-1.png> <./img/sin/
 sin-1-1-3-1.png> <./img/sin/sin-loss-1-1-3-1.png> <./img/sin/sin-1-2-2-1.png> <
@@ -805,7 +805,7 @@ sin-1-1-3-1.png> <./img/sin/sin-loss-1-1-3-1.png> <./img/sin/sin-1-2-2-1.png> <
 <img/poli/poli2-1-1-1-1.png, id=283, 481.8pt x 361.35pt>
 File: img/poli/poli2-1-1-1-1.png Graphic file (type png)
 <use img/poli/poli2-1-1-1-1.png>
-Package pdftex.def Info: img/poli/poli2-1-1-1-1.png  used on input line 351.
+Package pdftex.def Info: img/poli/poli2-1-1-1-1.png  used on input line 355.
 (pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
 
 
@@ -815,75 +815,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.351 ...5\linewidth]{img/poli/poli2-1-1-1-1.png}}
+l.355 ...5\linewidth]{img/poli/poli2-1-1-1-1.png}}
                                                   
 ? 
 <img/poli/poli2-loss-1-1-1-1.png, id=284, 481.8pt x 361.35pt>
 File: img/poli/poli2-loss-1-1-1-1.png Graphic file (type png)
 <use img/poli/poli2-loss-1-1-1-1.png>
 Package pdftex.def Info: img/poli/poli2-loss-1-1-1-1.png  used on input line 35
-2.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.352 ...ewidth]{img/poli/poli2-loss-1-1-1-1.png}}
-                                                   \hspace{0.5em}
-? 
-<img/poli/poli2-1-2-1-1.png, id=285, 481.8pt x 361.35pt>
-File: img/poli/poli2-1-2-1-1.png Graphic file (type png)
-<use img/poli/poli2-1-2-1-1.png>
-Package pdftex.def Info: img/poli/poli2-1-2-1-1.png  used on input line 353.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 ...5\linewidth]{img/poli/poli2-1-2-1-1.png}}
-                                                  
-? 
-<img/poli/poli2-loss-1-2-1-1.png, id=286, 481.8pt x 361.35pt>
-File: img/poli/poli2-loss-1-2-1-1.png Graphic file (type png)
-<use img/poli/poli2-loss-1-2-1-1.png>
-Package pdftex.def Info: img/poli/poli2-loss-1-2-1-1.png  used on input line 35
-4.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 ...ewidth]{img/poli/poli2-loss-1-2-1-1.png}}
-                                                   \hspace{0.5em}
-? 
-<img/poli/poli2-1-2-2-1.png, id=287, 481.8pt x 361.35pt>
-File: img/poli/poli2-1-2-2-1.png Graphic file (type png)
-<use img/poli/poli2-1-2-2-1.png>
-Package pdftex.def Info: img/poli/poli2-1-2-2-1.png  used on input line 355.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.355 ...5\linewidth]{img/poli/poli2-1-2-2-1.png}}
-                                                  
-? 
-<img/poli/poli2-loss-1-2-2-1.png, id=288, 481.8pt x 361.35pt>
-File: img/poli/poli2-loss-1-2-2-1.png Graphic file (type png)
-<use img/poli/poli2-loss-1-2-2-1.png>
-Package pdftex.def Info: img/poli/poli2-loss-1-2-2-1.png  used on input line 35
 6.
 (pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
 
@@ -893,13 +831,75 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.356 ...ewidth]{img/poli/poli2-loss-1-2-2-1.png}}
+l.356 ...ewidth]{img/poli/poli2-loss-1-1-1-1.png}}
+                                                   \hspace{0.5em}
+? 
+<img/poli/poli2-1-2-1-1.png, id=285, 481.8pt x 361.35pt>
+File: img/poli/poli2-1-2-1-1.png Graphic file (type png)
+<use img/poli/poli2-1-2-1-1.png>
+Package pdftex.def Info: img/poli/poli2-1-2-1-1.png  used on input line 357.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 ...5\linewidth]{img/poli/poli2-1-2-1-1.png}}
+                                                  
+? 
+<img/poli/poli2-loss-1-2-1-1.png, id=286, 481.8pt x 361.35pt>
+File: img/poli/poli2-loss-1-2-1-1.png Graphic file (type png)
+<use img/poli/poli2-loss-1-2-1-1.png>
+Package pdftex.def Info: img/poli/poli2-loss-1-2-1-1.png  used on input line 35
+8.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.358 ...ewidth]{img/poli/poli2-loss-1-2-1-1.png}}
+                                                   \hspace{0.5em}
+? 
+<img/poli/poli2-1-2-2-1.png, id=287, 481.8pt x 361.35pt>
+File: img/poli/poli2-1-2-2-1.png Graphic file (type png)
+<use img/poli/poli2-1-2-2-1.png>
+Package pdftex.def Info: img/poli/poli2-1-2-2-1.png  used on input line 359.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 ...5\linewidth]{img/poli/poli2-1-2-2-1.png}}
+                                                  
+? 
+<img/poli/poli2-loss-1-2-2-1.png, id=288, 481.8pt x 361.35pt>
+File: img/poli/poli2-loss-1-2-2-1.png Graphic file (type png)
+<use img/poli/poli2-loss-1-2-2-1.png>
+Package pdftex.def Info: img/poli/poli2-loss-1-2-2-1.png  used on input line 36
+0.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360 ...ewidth]{img/poli/poli2-loss-1-2-2-1.png}}
                                                   
 ? 
 <img/poli/poli3-1-1-1-1.png, id=289, 481.8pt x 361.35pt>
 File: img/poli/poli3-1-1-1-1.png Graphic file (type png)
 <use img/poli/poli3-1-1-1-1.png>
-Package pdftex.def Info: img/poli/poli3-1-1-1-1.png  used on input line 358.
+Package pdftex.def Info: img/poli/poli3-1-1-1-1.png  used on input line 362.
 (pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
@@ -908,75 +908,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.358 ...5\linewidth]{img/poli/poli3-1-1-1-1.png}}
+l.362 ...5\linewidth]{img/poli/poli3-1-1-1-1.png}}
                                                   
 ? 
 <img/poli/poli3-loss-1-1-1-1.png, id=290, 481.8pt x 361.35pt>
 File: img/poli/poli3-loss-1-1-1-1.png Graphic file (type png)
 <use img/poli/poli3-loss-1-1-1-1.png>
-Package pdftex.def Info: img/poli/poli3-loss-1-1-1-1.png  used on input line 35
-9.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.359 ...ewidth]{img/poli/poli3-loss-1-1-1-1.png}}
-                                                   \hspace{0.5em}
-? 
-<img/poli/poli3-1-2-1-1.png, id=291, 481.8pt x 361.35pt>
-File: img/poli/poli3-1-2-1-1.png Graphic file (type png)
-<use img/poli/poli3-1-2-1-1.png>
-Package pdftex.def Info: img/poli/poli3-1-2-1-1.png  used on input line 360.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.360 ...5\linewidth]{img/poli/poli3-1-2-1-1.png}}
-                                                  
-? 
-<img/poli/poli3-loss-1-2-1-1.png, id=292, 481.8pt x 361.35pt>
-File: img/poli/poli3-loss-1-2-1-1.png Graphic file (type png)
-<use img/poli/poli3-loss-1-2-1-1.png>
-Package pdftex.def Info: img/poli/poli3-loss-1-2-1-1.png  used on input line 36
-1.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 ...ewidth]{img/poli/poli3-loss-1-2-1-1.png}}
-                                                   \hspace{0.5em}
-? 
-<img/poli/poli3-1-2-2-1.png, id=293, 481.8pt x 361.35pt>
-File: img/poli/poli3-1-2-2-1.png Graphic file (type png)
-<use img/poli/poli3-1-2-2-1.png>
-Package pdftex.def Info: img/poli/poli3-1-2-2-1.png  used on input line 362.
-(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.362 ...5\linewidth]{img/poli/poli3-1-2-2-1.png}}
-                                                  
-? 
-<img/poli/poli3-loss-1-2-2-1.png, id=294, 481.8pt x 361.35pt>
-File: img/poli/poli3-loss-1-2-2-1.png Graphic file (type png)
-<use img/poli/poli3-loss-1-2-2-1.png>
-Package pdftex.def Info: img/poli/poli3-loss-1-2-2-1.png  used on input line 36
+Package pdftex.def Info: img/poli/poli3-loss-1-1-1-1.png  used on input line 36
 3.
 (pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
 
@@ -986,7 +924,69 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.363 ...ewidth]{img/poli/poli3-loss-1-2-2-1.png}}
+l.363 ...ewidth]{img/poli/poli3-loss-1-1-1-1.png}}
+                                                   \hspace{0.5em}
+? 
+<img/poli/poli3-1-2-1-1.png, id=291, 481.8pt x 361.35pt>
+File: img/poli/poli3-1-2-1-1.png Graphic file (type png)
+<use img/poli/poli3-1-2-1-1.png>
+Package pdftex.def Info: img/poli/poli3-1-2-1-1.png  used on input line 364.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 ...5\linewidth]{img/poli/poli3-1-2-1-1.png}}
+                                                  
+? 
+<img/poli/poli3-loss-1-2-1-1.png, id=292, 481.8pt x 361.35pt>
+File: img/poli/poli3-loss-1-2-1-1.png Graphic file (type png)
+<use img/poli/poli3-loss-1-2-1-1.png>
+Package pdftex.def Info: img/poli/poli3-loss-1-2-1-1.png  used on input line 36
+5.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 ...ewidth]{img/poli/poli3-loss-1-2-1-1.png}}
+                                                   \hspace{0.5em}
+? 
+<img/poli/poli3-1-2-2-1.png, id=293, 481.8pt x 361.35pt>
+File: img/poli/poli3-1-2-2-1.png Graphic file (type png)
+<use img/poli/poli3-1-2-2-1.png>
+Package pdftex.def Info: img/poli/poli3-1-2-2-1.png  used on input line 366.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366 ...5\linewidth]{img/poli/poli3-1-2-2-1.png}}
+                                                  
+? 
+<img/poli/poli3-loss-1-2-2-1.png, id=294, 481.8pt x 361.35pt>
+File: img/poli/poli3-loss-1-2-2-1.png Graphic file (type png)
+<use img/poli/poli3-loss-1-2-2-1.png>
+Package pdftex.def Info: img/poli/poli3-loss-1-2-2-1.png  used on input line 36
+7.
+(pdftex.def)             Requested size: 64.1121pt x 48.0799pt.
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.367 ...ewidth]{img/poli/poli3-loss-1-2-2-1.png}}
                                                   
 ? 
 
@@ -1005,45 +1005,45 @@ g/sin/sin-1-4-4-1(200).png> <./img/sin/sin-loss-1-4-4-1(200).png>]
 <img/sqrt/sqrt-1-1-1-1.png, id=310, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-1-1-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-1-1-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-1-1-1-1.png  used on input line 375.
+Package pdftex.def Info: img/sqrt/sqrt-1-1-1-1.png  used on input line 380.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-loss-1-1-1-1.png, id=311, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-loss-1-1-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-loss-1-1-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-loss-1-1-1-1.png  used on input line 376
+Package pdftex.def Info: img/sqrt/sqrt-loss-1-1-1-1.png  used on input line 381
 .
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-1-1-2-1.png, id=312, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-1-1-2-1.png Graphic file (type png)
 <use img/sqrt/sqrt-1-1-2-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-1-1-2-1.png  used on input line 378.
+Package pdftex.def Info: img/sqrt/sqrt-1-1-2-1.png  used on input line 383.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-loss-1-1-2-1.png, id=313, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-loss-1-1-2-1.png Graphic file (type png)
 <use img/sqrt/sqrt-loss-1-1-2-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-loss-1-1-2-1.png  used on input line 379
+Package pdftex.def Info: img/sqrt/sqrt-loss-1-1-2-1.png  used on input line 384
 .
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-1-2-1-1.png, id=314, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-1-2-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-1-2-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-1-2-1-1.png  used on input line 381.
+Package pdftex.def Info: img/sqrt/sqrt-1-2-1-1.png  used on input line 386.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-loss-1-2-1-1.png, id=315, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-loss-1-2-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-loss-1-2-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-loss-1-2-1-1.png  used on input line 382
+Package pdftex.def Info: img/sqrt/sqrt-loss-1-2-1-1.png  used on input line 387
 .
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-1-3-1-1.png, id=316, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-1-3-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-1-3-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-1-3-1-1.png  used on input line 384.
+Package pdftex.def Info: img/sqrt/sqrt-1-3-1-1.png  used on input line 389.
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 <img/sqrt/sqrt-loss-1-3-1-1.png, id=317, 481.8pt x 361.35pt>
 File: img/sqrt/sqrt-loss-1-3-1-1.png Graphic file (type png)
 <use img/sqrt/sqrt-loss-1-3-1-1.png>
-Package pdftex.def Info: img/sqrt/sqrt-loss-1-3-1-1.png  used on input line 385
+Package pdftex.def Info: img/sqrt/sqrt-loss-1-3-1-1.png  used on input line 390
 .
 (pdftex.def)             Requested size: 102.5859pt x 76.93886pt.
 
@@ -1067,12 +1067,12 @@ mg/sqrt/sqrt-1-1-2-1.png> <./img/sqrt/sqrt-loss-1-1-2-1.png> <./img/sqrt/sqrt-1
 <img/disc/disc-1-2-2-1.png, id=367, 481.8pt x 361.35pt>
 File: img/disc/disc-1-2-2-1.png Graphic file (type png)
 <use img/disc/disc-1-2-2-1.png>
-Package pdftex.def Info: img/disc/disc-1-2-2-1.png  used on input line 412.
+Package pdftex.def Info: img/disc/disc-1-2-2-1.png  used on input line 418.
 (pdftex.def)             Requested size: 213.71576pt x 160.2847pt.
 <img/disc/disc-loss-1-2-2-1.png, id=368, 481.8pt x 361.35pt>
 File: img/disc/disc-loss-1-2-2-1.png Graphic file (type png)
 <use img/disc/disc-loss-1-2-2-1.png>
-Package pdftex.def Info: img/disc/disc-loss-1-2-2-1.png  used on input line 413
+Package pdftex.def Info: img/disc/disc-loss-1-2-2-1.png  used on input line 419
 .
 (pdftex.def)             Requested size: 213.71576pt x 160.2847pt.
 
@@ -1088,12 +1088,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <img/disc/tan-1-5-5-1.png, id=379, 481.8pt x 361.35pt>
 File: img/disc/tan-1-5-5-1.png Graphic file (type png)
 <use img/disc/tan-1-5-5-1.png>
-Package pdftex.def Info: img/disc/tan-1-5-5-1.png  used on input line 424.
+Package pdftex.def Info: img/disc/tan-1-5-5-1.png  used on input line 431.
 (pdftex.def)             Requested size: 213.71576pt x 160.2847pt.
 <img/disc/tan-loss-1-5-5-1.png, id=380, 481.8pt x 361.35pt>
 File: img/disc/tan-loss-1-5-5-1.png Graphic file (type png)
 <use img/disc/tan-loss-1-5-5-1.png>
-Package pdftex.def Info: img/disc/tan-loss-1-5-5-1.png  used on input line 425.
+Package pdftex.def Info: img/disc/tan-loss-1-5-5-1.png  used on input line 432.
 
 (pdftex.def)             Requested size: 213.71576pt x 160.2847pt.
 
@@ -1106,27 +1106,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10 <./img/disc/tan-1-5-5-1.png> <./img/disc/tan-loss-1-5-5-1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 442--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--448
+Underfull \hbox (badness 10000) in paragraph at lines 454--456
 
  []
 
 
-Overfull \hbox (3.92497pt too wide) in paragraph at lines 448--451
+Overfull \hbox (7.24953pt too wide) in paragraph at lines 456--459
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
+Underfull \hbox (badness 10000) in paragraph at lines 460--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--476
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
@@ -1148,38 +1148,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
-Overfull \hbox (2.84573pt too wide) in paragraph at lines 504--505
+Overfull \hbox (2.84573pt too wide) in paragraph at lines 512--513
 [] [] 
  []
 
 <img/roman/roman(49).png, id=406, 481.8pt x 361.35pt>
 File: img/roman/roman(49).png Graphic file (type png)
 <use img/roman/roman(49).png>
-Package pdftex.def Info: img/roman/roman(49).png  used on input line 520.
+Package pdftex.def Info: img/roman/roman(49).png  used on input line 528.
 (pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
 <img/roman/roman(99).png, id=407, 481.8pt x 361.35pt>
 File: img/roman/roman(99).png Graphic file (type png)
 <use img/roman/roman(99).png>
-Package pdftex.def Info: img/roman/roman(99).png  used on input line 521.
+Package pdftex.def Info: img/roman/roman(99).png  used on input line 529.
 (pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
 <img/roman/roman(399).png, id=408, 481.8pt x 361.35pt>
 File: img/roman/roman(399).png Graphic file (type png)
 <use img/roman/roman(399).png>
-Package pdftex.def Info: img/roman/roman(399).png  used on input line 522.
+Package pdftex.def Info: img/roman/roman(399).png  used on input line 530.
 (pdftex.def)             Requested size: 128.23076pt x 96.17082pt.
 <Neural_Network/roman_architecture.jpg, id=411, 599.23875pt x 542.025pt>
 File: Neural_Network/roman_architecture.jpg Graphic file (type jpg)
 <use Neural_Network/roman_architecture.jpg>
 Package pdftex.def Info: Neural_Network/roman_architecture.jpg  used on input l
-ine 535.
+ine 544.
 (pdftex.def)             Requested size: 156.49014pt x 141.54347pt.
 
-Underfull \hbox (badness 1117) in paragraph at lines 536--536
-\T1/cmr/m/n/10.95 prox-i-mates the ro-man num-ber
- []
-
-
-Overfull \hbox (0.86452pt too wide) in paragraph at lines 533--547
+Overfull \hbox (0.86452pt too wide) in paragraph at lines 542--556
 []$[]$   $[]$ 
  []
 
@@ -1187,43 +1182,43 @@ Overfull \hbox (0.86452pt too wide) in paragraph at lines 533--547
 File: img/roman/roman_first_approach.png Graphic file (type png)
 <use img/roman/roman_first_approach.png>
 Package pdftex.def Info: img/roman/roman_first_approach.png  used on input line
- 552.
+ 561.
 (pdftex.def)             Requested size: 192.34288pt x 144.25624pt.
 <img/roman/roman_second_approach.png, id=414, 481.8pt x 361.35pt>
 File: img/roman/roman_second_approach.png Graphic file (type png)
 <use img/roman/roman_second_approach.png>
 Package pdftex.def Info: img/roman/roman_second_approach.png  used on input lin
-e 554.
+e 563.
 (pdftex.def)             Requested size: 192.34288pt x 144.25624pt.
 <img/roman/roman_third_approach.png, id=416, 481.8pt x 361.35pt>
 File: img/roman/roman_third_approach.png Graphic file (type png)
 <use img/roman/roman_third_approach.png>
 Package pdftex.def Info: img/roman/roman_third_approach.png  used on input line
- 564.
+ 573.
 (pdftex.def)             Requested size: 156.49014pt x 117.36568pt.
 
-Overfull \hbox (0.86452pt too wide) in paragraph at lines 562--574
+Overfull \hbox (0.86452pt too wide) in paragraph at lines 571--583
 []$[]$   $[]$ 
  []
 
 <img/roman/roman_over_kill.png, id=418, 481.8pt x 361.35pt>
 File: img/roman/roman_over_kill.png Graphic file (type png)
 <use img/roman/roman_over_kill.png>
-Package pdftex.def Info: img/roman/roman_over_kill.png  used on input line 581.
+Package pdftex.def Info: img/roman/roman_over_kill.png  used on input line 590.
 
 (pdftex.def)             Requested size: 156.49014pt x 117.36568pt.
 
-Underfull \hbox (badness 1675) in paragraph at lines 582--582
+Underfull \hbox (badness 1675) in paragraph at lines 591--591
 []\T1/cmr/m/n/10.95 Figure 13: |Fi-nal ar-chi-tec-ture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--590
+Underfull \hbox (badness 10000) in paragraph at lines 596--599
 
  []
 
 
-Overfull \hbox (0.86452pt too wide) in paragraph at lines 579--591
+Overfull \hbox (0.86452pt too wide) in paragraph at lines 588--600
 []$[]$   $[]$ 
  []
 
@@ -1256,7 +1251,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15 <./img/roman/roman_third_approach.png> <./img/roman/roman_over_kill.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 622--626
+Underfull \hbox (badness 10000) in paragraph at lines 631--635
 
  []
 
@@ -1270,7 +1265,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-30.
+39.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -1284,16 +1279,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17] (./TFG.aux)
 Package rerunfilecheck Info: File `TFG.out' has not changed.
-(rerunfilecheck)             Checksum: B164C370FD381271C3D28CAF6AE5E789;4098.
+(rerunfilecheck)             Checksum: BA4A415FFA4B4D3F330147718E8C6C2B;4098.
  ) 
 Here is how much of TeX's memory you used:
  14934 strings out of 476091
  240387 string characters out of 5794081
- 1872330 words of memory out of 5000000
+ 1871330 words of memory out of 5000000
  34886 multiletter control sequences out of 15000+600000
  532281 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,425b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,427b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -1320,7 +1315,7 @@ nts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfxc2488.pfb>
-Output written on TFG.pdf (23 pages, 1028451 bytes).
+Output written on TFG.pdf (23 pages, 1028578 bytes).
 PDF statistics:
  643 PDF objects out of 1000 (max. 8388607)
  454 compressed objects within 5 object streams

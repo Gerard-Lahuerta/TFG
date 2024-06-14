@@ -12,7 +12,7 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Study of Jump discontinuity}{9}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Study of Asimptotyc discontinuity}{10}{subsubsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.4}Observations of the results}{10}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Arabic to roman numbers}{12}{section.3}%
+\contentsline {section}{\numberline {3}Arabic to Roman numbers}{12}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Preprocess of data and reduction of variables}{12}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analisis of the dataset and creation of the neural network}{13}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Efficiency and time-cost results}{16}{subsection.3.3}%
