@@ -170,7 +170,7 @@ This study in the context of neural networks and computational cost gives a new 
 Its main objective is to sample enough evidence for which deterministic processes can be modelled with neural networks, allowing in cases where this deterministic processes are computationally expensive come by an approximated value within a fixed time.\\
 This study is performed using the scientific method of: \textit{Observation}, \textit{Hypothesis}, \textit{Experimentation}, \textit{Conclusions}.\\
 It develops some working hypotheses that could not be proven but if future investigations verify it, these working hypotheses gives a better understanding of neural networks and how their architecture can be planned.\\
-The results are not as relevant as should be to ensure the viability of the proposals but they give a starting point for future works in the area.\\
+The results are not as relevant as should be to ensure the viability of the Working Hypothesis proposet but they give a starting point for future works in the area.\\
 \textcolor{white}{a}\\
 \textcolor{white}{a}\\
 \underline{\textbf{Key words:}} \textit{neural networks, multilayer perceptron, deterministic process, Universal Approximation Theorem, distribution of roman numbers.}
@@ -432,7 +432,7 @@ Finally, reproducing the experiment for the function $\sqrt{x}$, the results obt
 \end{figure}\\
 In this study, the only parameter that was changed with respect to the previous experiments was the domain (which was increased to the interval $[-4,4]$).\\
 As it can be observed, the architecture that approximates the best the function is $1-3-1-1$.\\
-Furthermore, it should also be commented that the intuition of the inclusion of irrational functions such as the $\sqrt{x}$ in the axioms of the proposal was made to use the property of having a function similar to $ReLU$\footnote{The \textit{ReLU} function is widely used as an activation function which is defined as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ x, x\geq 0\end{matrix} \right.$}.\\
+Furthermore, it should also be commented that the intuition of the inclusion of irrational functions such as the $\sqrt{x}$ in the axioms of the Working Hypothesis was made to use the property of having a function similar to $ReLU$\footnote{The \textit{ReLU} function is widely used as an activation function which is defined as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ x, x\geq 0\end{matrix} \right.$}.\\
 
 \subsection{Viability of approximation discontinuous functions}
 It is important to keep in mind that splitting functions into domains can develop in discontinuities which do not allow the use of the \textbf{Universal Approximation Theorem}.\\
@@ -441,10 +441,10 @@ The widely use of $ReLU$ function in neural networks is because it is easier to 
 \newpage
 \hspace{-1.6em}\rule{\linewidth}{0.4pt}
 \begin{itemize}
-    \item \textbf{Working Hypotesis:} If a function has discontinuities different from asymptotic, the \textbf{Universal Approximation Theorem} can be used to give an approximation with error 0 when the number of sigmoid tends to infinity.
+    \item \textbf{Suggested Hypotesis:} If a function has discontinuities different from asymptotic, the \textbf{Universal Approximation Theorem} can be used to give an approximation with error 0 when the number of sigmoid tends to infinity.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
-This proposal can be sustained by the ability of sigmoid functions to approximate jump discontinuities. However, an experiment with discontinuous functions has been done to give evidence for this proposal.
+This Suggested Hypothesis can be sustained by the ability of sigmoid functions to approximate jump discontinuities. However, an experiment with discontinuous functions has been done to give evidence for this hypothesis.
 \subsubsection{Study of Jump discontinuity}
 In this experiment, a simple architecture of $1-2-2-1$ with a high amount of epochs (concretely $10000$) and fixed learning rate of $0.1$ have been used to approximate the function:
 $$ f(x) = \left\{ \begin{matrix}
@@ -487,7 +487,7 @@ To sum up, all the results and conclusions obtained in the studies we can conclu
     rules.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
-To verify the viability of the proposal needed to accomplish the following conditions:
+To verify the viability of the Working Hypothesis needed to accomplish the following conditions:
 \newpage
 \begin{enumerate}
     \item \underline{All periodic functions can be approximated as a combination of $\sin$ functions.}\vspace{0.5em}\\
@@ -511,7 +511,7 @@ To verify the viability of the proposal needed to accomplish the following condi
  This deduction can also be demonstrated using tangency:\\
     \rule{\linewidth}{0.4pt}
     \begin{itemize}
-        \item \textbf{Demostration:} Approximation of irrational functions.\\
+        \item \textbf{Proof:} Approximation of irrational functions.\\
  Being $f_n:\mathbb{R}\rightarrow\mathbb{R}$, $g:\mathbb{R}\rightarrow\mathbb{R}$ where $f_n(x) = \sqrt[n]{x}, \forall n \in \mathbb{N} / n > 1$ and $g(x) = \sqrt{x}$.\\
  Being $P=(p_0, p_1)\in[a,b]\subset \mathbb{R} / p_0 = \frac{a+b}{2}, p_1 = f_n(p_0)$, \\$\exists c,d\in\mathbb{R} / g(c\cdot p_0 + d) = p_1$.
  Therefore, 
@@ -527,46 +527,56 @@ To verify the viability of the proposal needed to accomplish the following condi
     \underline{distinguishable architecture.}\vspace{0.5em}\\
  The studies about the different architectures of the different functions ($x^2, \sin{x}, \sqrt{x}$) show that there exists a distinguishable minimum architecture that approximates the best of each function.\\
     \item \underline{There is a determined minimum number of data to train the neural network.}\vspace{0.5em}\\
- That point is controversial. In all the studies the number of data available were different with at least $600$ registers. However, the relevant part about this is that it really needs a deterministic process that generates the dataset.\\
+ That point is controversial\footnote{It is controversial because the number of samples depends on the range of the interval and the backpropagation requires to perform good adjustments}. In all the studies the number of data available were different with at least $600$ registers. However, the relevant part about this is that it really needs a deterministic process that generates the dataset.\\
  The minimal information that is required is the deterministic process intrinsically. If there is no deterministic process the information needed will not be enough despite how many data it could recap.\\
  This is the consequence of the \textit{backpropagation} method and its dependency in the \textit{Steepest Gradient Descend}. If there is no "correct" model to compare and interpret the functionality of the network it is not possible to "extract theoretically the best architecture".\\
  Hence, there is no "minimum number of samples" despite there is necessary existence of a (deterministic) \textit{non-black box}\footnote{A \textit{black box} model is a process where the internal operations and functionality of it can not be interpreted partially or at all, giving the aspect of being a non-undertanable or/and verified model.} method.
 \end{enumerate}
-Concluding the observations, the studies give enough evidence of the proposal.\\
+Concluding the observations, the studies give enough evidence of the Working Hypothesis.\\
 To give more evidence of that proof, an experimental process will be done to extract the best minimal architecture that approximates a deterministic process.\\
 Moreover, an efficiency test will be also performed to ensure that neural networks in collaboration with the information that gives the deterministic process improve the computation time needed.
 
 \section{Arabic to Roman numbers}
 The idea about that topic is the following: any natural number (normally written in the Arabic form) can be expressed as a Roman number. This process is a sequence of fixed rules that if you follow them, give you the result (it is a deterministic process).\\
-As is a deterministic function ensures the existence of a function that models the process, but this function is unknown.\\
-The main objective is, with the observation and the proposal done before, to create a neural network that approximates this unknown function.
+As it is a deterministic process ensures the existence of a function that models the process, but this function is unknown.\\
+The main objective is, with the observation and the Working Hypothesis done before, to create a neural network that approximates an unknown function.
+\subsection{Function to approximate}
+The unkown function that is going to be approximated is the composition of two functions:
+\begin{enumerate}
+    \item Function that represents each natural number into its roman number expression ($f_1$).
+    \item Function that associates every expression of roman number to a natural number ($f_2$).
+\end{enumerate}
+The usage of this two functions in composition, $f_2(f_1)$, is unknown but it ensures that can be represented in the plain:
+$$\mathbb{N} \overset{f_1}{\longrightarrow} \{C_n\} \overset{f_2}{\longrightarrow} \mathbb{N}, \hspace{1em} f_2(f_1): \mathbb{N}\longrightarrow\mathbb{N}$$
+Where $\{C_n\}$ is the set of roman numbers with $n$ letters ($n\in\mathbb{N}$).\\ 
+Therefore the input and ouput number can be diferent between them.
+
 
 \subsection{Preprocess of data and reduction of variables}
 The main problem when tracking with Roman numbers is that is a sequence of different characters that can not be handled easily. Therefore a simplification was performed.\\
 \rule{\linewidth}{0.4pt}
     \begin{itemize}
         \item \textbf{Application:} Interpretation of Roman numbers.\\
- Being the set $C_n = \{c_0, \cdots, c_{n-1} \}$ where $\forall c \in C_n$ is a roman number.\\ 
- Let's define that each $\forall c \in C_n$ is formed by two characters: $c = (a,b)$, where $b$ is a letter of the Roman number system, the set $\{I, V, X, C, \cdots \}$, and $a$ the element in the roman number system just one or two positions before which is $b$ or $\varnothing$.\\
+ Being the set $C_n = \{c_0, \cdots, c_{n-1} \}$ where $\forall c_i \in C_n$ is a roman number.\\ 
+ Let's define that each $\forall c \in C_n$ is formed by two characters: $c = (a,b)$, where $b$ is a letter of the Roman number system, the set $\{I, V, X, C, \cdots \}$, and $a$ the element in the roman number system just one positions before which is $b$ or "$I$" or nothing ($\varnothing$).\\
  Using this assumption we can write every number, for example, the element\\
         $c = (I,V) \equiv 4$ and the sequence $C_3 = \{ (\varnothing, X), (\varnothing, X), (I,V) \} \equiv 24$.
     \end{itemize}
 \rule{\linewidth}{0.4pt}\\
-With this interpretation and definition of the Roman numbers set and its properties, another application can be done.
-\newpage
-\hspace{-1.3em}\rule{\linewidth}{0.4pt}
+With this interpretation and definition of the Roman numbers set and its properties, another application can be done.\\
+\rule{\linewidth}{0.4pt}
     \begin{itemize}
         \item \textbf{Application:} Reduction of liberty degrees function.\\
  Using the previous definition of the \textit{Roman numbers set}, it is possible to create a function $f:\{C_n\}\rightarrow \mathbb{Z}, \forall n \in \mathbb{N}$.\\
- Before defining this function it essentially assigns to each letter of the Roman number system a number (for example its position in the alphabet starting with $A\equiv1$ and defining $\varnothing \equiv 0$).\\
+ Before defining this function it essential to assign a number system to each letter of the Roman number system (for example its position in the alphabet starting with $A\equiv1$ and defining $\varnothing \equiv 0$).\\
  This method allows us to represent the example sequence used before as a set of numbers: 
         $$C_3 = \{ (\varnothing, X), (\varnothing, X), (I,V) \} \equiv \{ (0,24), (0,24), (9,22) \} \equiv 24$$
  Now we can create the function $f:C_n\rightarrow \mathbb{Z}, \forall n \in \mathbb{N}$ as:
         $$ f(C_n) = \sum_{i = 0}^{n-1} b_i-a_i, \text{ where } c_i = (a_i, b_i) $$
     \end{itemize}
 \rule{\linewidth}{0.4pt}\\
-This application allows to representation of each Roman number in one Arabic number (but does not ensure that this process satisfies the injection property).\\
-The important about this process is that we can represent each natural number expressed in Arabic with another number (in the integers) in Arabic which is equivalent to, at least one, roman number.\\
+This application allows to represent each Roman number in one Arabic number (but does not ensure that this process satisfies the injection property).\\
+The importance about this process is that we can represent each natural number expressed in Arabic with another number (in the integers) in Arabic which is equivalent to, at least one, roman number.\\
 In consequence, it can be represented graphically in $\mathbb{R}^2$. This representation is shown in \ref{romans}.
 \begin{figure}[h]
     \centering
@@ -581,26 +591,26 @@ However is an ideal case to use the experimental observation and try to obtain w
 
 \subsection{Analisis of the dataset and creation of the neural network} 
 The shape of the function shown in \ref{romans} tends to mimic the \textit{Sawtooth wave} but, in this case, it is not exactly periodical. This consequence (not being periodical) creates some problems because the application of the architecture developed to approximate the periodical functions can not be applied correctly.\\
-Despite this problem, it is possible to use the architecture developed for periodical functions (tending to approach the \textit{Fourier Serie} of the \textit{Sawthooth wave}) in what seems to be the period of the wave $49$. \\
-Therefore, the neural neural network will have the architecture shown in \ref{roman-architecture}.
+Despite this problem, it is possible to use the architecture developed for periodical functions (tending to approach the \textit{Fourier Serie} of the \textit{Sawthooth wave}) in what seems to be the period of the wave $T=49$. \\
+Therefore, the neural neural network should have the architecture shown in \ref{roman-architecture}.
 \begin{figure}[h]
     \begin{minipage}{5.5cm}
         \begin{center}
             \includegraphics[width = 1\linewidth]{Neural_Network/roman_architecture.jpg}
-            \caption{Proposal architecture of the neural network that approximates the Roman number distribution}
+            \caption{Working Hypotesis architecture of the neural network that approximates the Roman number distribution}
             \label{roman-architecture}
         \end{center}
     \end{minipage}
     \hspace{1em}
     \begin{minipage}{9cm}
  This neural network will be composed of two neurons (one input and one output) that send/receive the information to/from sub-neural networks with the architecture obtained to modulate the $\sin$ function.\\
- The neural network will be trained with only the first subset of the dataset (number between 0 and 49) and if a bigger number is introduced it only needs to be reduced as the remainder of the division of this number and the period ($49$).\\
+ The neural network will be trained with only the first subset of the dataset (number between 0 and 49) and if a bigger number is introduced it only needs to be reduced as the remainder of the division of this number and the period $T$.\\
  The important part of the network is the number of sub-neural networks, the learning rate and the number of epochs that need to approximate properly the distribution.\\
- Unfortunately, the number of epochs and learning rate can not be deduced until several have been tested.
+ Unfortunately, the number of epochs and learning rate can not be deduced until it has been tested several times.
     \end{minipage}
 \end{figure}\\
 However, the number of sub-networks could be deduced as the amount needed to approximate the \textit{Fourier Serie} the \textit{Sawthooth wave} with enough precision.\\
-To test and deduce the optimal number of sub-networks and the value of the learning rate, two first approaches have been done, as can be seen in \ref{first-approach}
+To test and deduce the optimal number of sub-networks and the value of the learning rate, two similar approaches have been done, as can be seen in \ref{first-approach}
 \begin{figure}[h]
     \centering
     \subfloat[Network with 3 architectures $1-2-2-1$ and fixed learning rate]{\includegraphics[width=0.45\linewidth]{img/roman/roman_first_approach.png}}
@@ -610,25 +620,25 @@ To test and deduce the optimal number of sub-networks and the value of the learn
     \label{first-approach}
 \end{figure}\\
 The conclusion obtained from this test is that the simple architecture of the $\sin$ function of $1-2-2-1$ is not enough and could be improved by using the most robust one of $1-2-4-1$.\\
-Moreover, the variable learning rate (decreasing its value while the epochs increase) adjusts better the pics of the distribution. However, the number of epochs testes (in the case of figure \ref{first-approach} $1000$) seems to not be enough.\\
-Also, comment that the scale of the distribution has been decreased by one order of magnitude to reduce the variance between values and help to focus the Backpropagation when training (by reducing the gradient vector and avoiding irrational move through the function cost reduction).
+Moreover, the variable learning rate (decreasing its value while the epochs increase) adjusts better the extrems of the distribution. However, the number of epochs tested (in the case of figure \ref{first-approach} $1000$) seem not to be enough.\\
+Remark that the scale of the distribution has been decreased by one order of magnitude to reduce the variance between values and help to focus the Backpropagation when training (reducing the gradient vector to avoid erratic moves through the function cost).
 \begin{figure}[h]
     \begin{minipage}{5.5cm}
         \begin{center}
             \includegraphics[width = 1 \linewidth]{img/roman/roman_third_approach.png}
-            \caption{Improvement of the sub-network capabilities to approach the distribution of roman numbers}
+            \caption{Improvement of sub-network capabilities to approach the roman numbers distribution}
             \label{second-approach}
         \end{center}
     \end{minipage} \hspace{1em}
     \begin{minipage}{9cm}
- If the test is repeated with 4 sub-networks with architectures $1-2-4-1$, introducing the learning rate reduction by one order of magnitude each time the number of epochs done increases its order of magnitude and $10000$ epochs the results obtained perform a better approach, as can be seen in \ref{second-approach}.\\
- From the figure, it is possible to deduce that the critical number of sub-networks has not been obtained yet. Moreover, observing the graph another conclusion can be made; the number of epochs is not enough.\\
+ If the test is repeated with 4 sub-networks with architectures $1-2-4-1$, introducing the learning rate reduction by one order of magnitude each time the number of epochs done increases its order of magnitude, and with $10000$ epochs the results obtained perform a better approach, as can be seen in \ref{second-approach}.\\
+ From the figure, it is possible to deduce that the critical number of sub-networks has not been obtained yet. Moreover, observing the figure another conclusion can be made; the number of epochs is not enough.\\
  Nevertheless, it is possible that the model is more complex than it should be.
     \end{minipage}
 \end{figure}\\
-Studying the distribution and behaviour of the Roman numbers, it can be deduced that it has 3 subperiods.\\
-The first period occurs when the number ends in $4$, the second when the number ends in $9$ and the third period is when the number starts with $4$ or $9$.\\
-In all these three cases the behaviour of the function changes (decreasing or increasing the following value much more than it would expect within its tendency). Using this information can be considered that the exact amount of subnetworks of the type $1-2-4-1$ to perform the best relation with precision-efficiency is $3$ (one for each period).  
+Studying the distribution and behaviour of the Roman numbers, it can be deduced that it has 3 subperiods.
+The first period occurs when the number ends in $4$, the second when the number ends in $9$ and the third period is when the number starts with $4$ or $9$.
+Using this information can be considered that the exact amount of subnetworks of the type $1-2-4-1$ to perform the best relation with precision-efficiency is $3$ (one for each period).
 \begin{figure}[h]
     \begin{minipage}{5.5cm}
         \begin{center}
@@ -638,45 +648,48 @@ In all these three cases the behaviour of the function changes (decreasing or in
         \end{center}
     \end{minipage} \hspace{1em}
     \begin{minipage}{9cm}
- In this approach, the number of epochs has been increased to $10^6$ epochs and includes $3$ sub-networks with architectures $1-2-4-1$.\\
- The results obtained in \ref{overkill-approach} are not as good as was expected but give the best precision at the moment.\\
- However, until now there is not enough precision to consider any of these architectures a good candidate to approximate the distribution of the Roman numbers.\\
+        In this approach, the number of epochs has been increased to $10^6$ epochs and includes $3$ sub-networks with architectures $1-2-4-1$.
+        The results obtained in \ref{overkill-approach} are not as good as was expected but give the best precision at the moment.
+        However, until now there is not enough precision to consider any of these architectures a good candidate to approximate the distribution of the Roman numbers.
+        Notwithstanding, all this unexpected non-approximation of the function could be caused by the unknown correct values of necessary epochs and/or learning rate.
     \end{minipage}
 \end{figure}\\
-Nevertheless, all this unexpected non-approximation of the function could be caused by the unknown correct values of necessary epochs and/or learning rate.\\
-This problem could not be solved using the proposal and gives problems when planning the correct architecture for modelling a process.\\
+This problem could not be solved using the Working Hypotesis and gives problems when planning the correct architecture for modelling a process.\\
 Therefore, as it is impossible to perform a comparison between the results of the methods due to the poor precision of the models, an analysis of training cost has to be done to verify if it is practical to make improvements in the process to allow the models to train with more capabilities (such as parallelization using GPU, improvements of the neural network code or more data an training time). 
 
+\newpage
 \subsection{Efficiency and time-cost results}
-To sum up, for all four tests we can reflect results\footnote{the results, studies and figures that have been shown/mentioned in the report where using a Raspberry PI 4 to ensure that the computational cost and time process can be completed without any problems of different capabilities.} in the table \ref{efficiency-table}.\\
+To sum up, for all four tests we can reflect results\footnote{The results, studies and figures that have been shown/mentioned in the report where using a Raspberry PI 4 to ensure that the computational cost and time process can be completed without any problems of different capabilities.} in the table \ref{efficiency-table}, where the \textit{Training time} units is seconds.\\
 \begin{table}[h]
     \centering
     \begin{tabular}{c|c|c|c|c|c}
  Sub-networks & Architecture & Epochs & Learning rate & Training time & Mean MSE\\\hline\hline
  3 & $1-2-2-1$ & $10^3$ & 0.01 & 1.03" & 4.09 \\\hline
- 4 & $1-2-2-1$ & $10^3$ & $\{10^{-2}, 10^{-3}\}$ & 1.70" & 2.96 \\\hline
- 4 & $1-2-4-1$ & $10^5$ & $\{10^{-(2+i)}\}_{i=0}^{2}$& 2'1.04" & 0.87 \\\hline
- 3 & $1-2-4-1$ & $10^6$ & $\{10^{-(3+2i)}\}_{i=0}^{3}$& 10'17.55" & 0.14\\
+ 4 & $1-2-2-1$ & $10^3$ & $\{10^{-2}, 10^{-3}\}$ & 1.70 & 2.96 \\\hline
+ 4 & $1-2-4-1$ & $10^5$ & $\{10^{-(2+i)}\}_{i=0}^{2}$& 121.04 & 0.87 \\\hline
+ 3 & $1-2-4-1$ & $10^6$ & $\{10^{-(3+2i)}\}_{i=0}^{3}$& 617.55 & 0.14\\
     \end{tabular}
-    \caption{Analisis of cost and efficiency about the different architectures develop}
+    \caption{Analysis of cost and efficiency about the different architectures develop}
     \label{efficiency-table}
-\end{table}
+\end{table}\\
 It can be observed that the training models used are quite good taking into account that the epochs are "relatively low". Also, mention that the "size" of the architecture is not as big as normally MLPs are done to approach this type of problem.\\
-Therefore it can be considered a shred of evidence that the proposal made as a set of "considerations" to develop neural networks could be verified in other dimensions and consolidated as a theorem if it is possible to prove its properties.\\
-In the worst scenario, the study has shown that knowing the process behind a model can be used as a sustain to create neural network experts in solving this process (which could perform a fixed amount of operations to develop a task which, in its deterministic process of calculation, will not be able to determine or even have the solution in a properly amount of time).
+Therefore it can be considered a shred of evidence that the Working Hypothesis made as a set of "considerations" to develop neural networks could be verified in other dimensions and consolidated as a theorem if it is possible to prove its properties.\\
+In the worst scenario, the study has shown that knowing the process behind a model can be used as a sustain to create neural network experts in solving this process (which could perform a fixed amount of operations to develop a task which, in its deterministic process of calculation, will not be able to determine or even have the solution in a reasonable amount of time).
 
+\newpage
 \section{Conclusions}
-Despite all the objectives initially planned have been achieved:
+All the objectives initially planned have been achieved:
 \begin{enumerate}
     \item Develop neural networks using C language coding.
     \item Propose a possible improvement of how neural networks can be designed.
     \item Verify that The \textbf{Universal Approximation Theorem} definition can be expanded and used in cases that theoretically it should not be able to.
-    \item Propose a neural network using the obtained proposal that approximates a deterministic process.
+    \item Propose a neural network using the obtained Working Hypotesis that approximates a deterministic process.
 \end{enumerate} 
-The most challenging objective, being able to improve the time process for a deterministic process using a neural network, was not achieved.\\
-However, during the study, it has been shown that there exists enough evidence that this challenge can be done with a better performance and analysis of the deterministic process.\\
-It is unfair not to mention that the deterministic process selected to verify the improvements of applying neural networks could have been as easy as it has thought and with another deterministic process this verification objective could be achieved much more easily.\\
-Also, emphasize the different proposals done during the study as can be an initial point for future studies and encourage to take it as a starting point to develop better proposals and correct any possible mistakes that could be done and not taken into consideration.\\
+In spite of the fact that the most challenging objective, being able to improve the time process for a deterministic process using a neural network, was not achieved,
+during the study, it has been shown that there exists enough evidence that this challenge can be done with a better performance and analysis of the deterministic processes.\\
+It is unfair not to mention that the deterministic process selected to verify the improvements of applying neural networks was not as easy as it was thought and with another deterministic process this verification objective could have been achieved much easily.\\
+Also, emphasize that the different Working Hypoteses done during the study can be an initial point for future studies.\\
+Encouraging everyone to take it as a starting point to develop better the Working and Suggested Hypothesis and correct any possible mistakes that could have been done and not taken into consideration.\\
 
 \newpage
 \begin{thebibliography}{X}
