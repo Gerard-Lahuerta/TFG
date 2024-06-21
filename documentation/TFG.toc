@@ -1,0 +1,19 @@
+\contentsline {section}{Introduction}{2}{section*.8}%
+\contentsline {section}{\numberline {1}Neural Networks}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Multilayer Perceptron and Perceptron neuron}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Why Neural Networks work}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Neural Networks topology}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Hypotesis and Working Hypothesis}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Study of deterministic processes}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Study of the \textit {sin} function}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Study of the \textit {parabolic} function}{8}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Study of the \textit {squared root} function}{9}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Viability of approximation discontinuous functions}{9}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Study of Jump discontinuity}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Study of Asimptotyc discontinuity}{10}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Observations of the results}{11}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Arabic to Roman numbers}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Preprocess of data and reduction of variables}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Analisis of the dataset and creation of the neural network}{14}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Efficiency and time-cost results}{17}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Conclusions}{17}{section.4}%

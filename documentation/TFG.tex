@@ -166,11 +166,11 @@ I, \textit{Gerard Lahuerta Martín}, declare that this thesis titled, "\textbf{I
 
 \newpage
 \section*{Abstract}
-This study in the context of neural networks and computational cost gives a new perspective of a possible method that reduces time-cost from the deterministic process.\\
-Its main objective is to sample enough evidence that deterministic processes can be modelled with neural networks, allowing in cases where this deterministic process is computationally expensive, to give an approximation value within a fixed time.\\
+This study in the context of neural networks and computational cost gives a new perspective of a possible method that reduces time-cost of deterministic processes.\\
+Its main objective is to sample enough evidence for which deterministic processes can be modelled with neural networks, allowing in cases where this deterministic processes are computationally expensive come by an approximated value within a fixed time.\\
 This study is performed using the scientific method of: \textit{Observation}, \textit{Hypothesis}, \textit{Experimentation}, \textit{Conclusions}.\\
-Also develops some proposals that could not be proven but if future investigations verify it, give a better understanding of neural networks and how their architecture can be planned.\\
-The results are not as relevant as should be to ensure the viability of the proposals but give a starting point for future works in the area.\\
+It develops some working hypotheses that could not be proven but if future investigations verify it, these working hypotheses gives a better understanding of neural networks and how their architecture can be planned.\\
+The results are not as relevant as should be to ensure the viability of the proposals but they give a starting point for future works in the area.\\
 \textcolor{white}{a}\\
 \textcolor{white}{a}\\
 \underline{\textbf{Key words:}} \textit{neural networks, multilayer perceptron, deterministic process, Universal Approximation Theorem, distribution of roman numbers.}
@@ -198,27 +198,26 @@ Thank you all for everything.
 \newpage
 \section*{Preface}
 This report is an ambitious project that has been developing for months and has been meditated even more.\\
-In all the process each piece and each result obtained remarks the viability of this type of methodologies to improve the task of neural network development and how it can be implemented to solve problems that have high computational costs.
+Every result obtained remarks the viability of neural network development and how it can be implemented to solve problems that have high computational costs.\\
+All the resources used can be consulted in the \href{https://github.com/Gerard-Lahuerta/TFG}{GitHub repository}.
 
 \newpage \pagestyle{extended_plain}
 \setcounter{page}{2}
-\addcontentsline{toc}{section}{Introducción}
-\section*{Introducción}
-This work is a starting point for other investigations and developments about neural networks and deterministic processes.\\
-It is known that a fixed series of rules applied to a group which responds to another group can be explained as an application between the sets.
-This application is unknown and in some cases cannot be described at all. Nevertheless, as exist the deterministic process it is possible to recreate some registers to train a neural network.\\
-This neural network, using the \textbf{Universal Approximation Theorem}, with enough time and data, can mimic the function and therefore can approach the results that give the deterministic process.\\
-In cases where it is not possible to know how much time a deterministic process could obtain a solution, neural networks can perform an approximated solution within a fixed number of calculations.\\
-The application of the neural networks in areas where the process to solve the calculations needed is really expensive in cost-time can give a notorious improvement with a relatively little cost of approximation and training process.\\
-In the study, a set of observed and a principal proposal about neural networks will be performed to recap enough evidence that it is possible to recreate a neural network with the ability to mimic any deterministic process; testing the limits of the \textbf{Universal Approximation Theorem} and applying the result observations into a practical problem where it is shown that this method can be very useful.
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+This work is a starting point for other investigations about neural networks in deterministic processes and how they can be developed.\\
+It is known that a fixed series of rules which associates two groups can be explained as an application between these sets.
+This application is unknown and in some cases cannot be described at all. Nevertheless, since the deterministic process exists, it is possible to create some registers to train a neural network.\\
+This neural network, thanks to the \textbf{Universal Approximation Theorem}, can mimic the application, with enough time and data. Therefore, it can approach the results of the deterministic process.\\
+In cases where it is not possible to know how much time a deterministic process could take to obtain a solution, neural networks can perform an approximated solution within a fixed number of calculations.\\
+In this study, observations and a \textit{Working Hypothesis} about neural networks will be tested: It is possible to recreate a neural network with the ability to mimic any deterministic process?\\ 
+To solve this hypothesis, it is necessary to test the limits of the \textbf{Universal Approximation Theorem}.\\
+Therefore, it is compulsary to test the results and observations throughout a practical problem. While solving this problem enough evidence will be recapped to ensure that the proposed \textit{Working Hypothesis} can be advantageous.
 
 \newpage
 \section{Neural Networks} 
 A neural Network is made of individual and independent elements connected between them, passing and managing the information through the network formed.\\
 In this thesis we will focus on one of the simplest networks, a multilayer perceptron, to test the different methods of optimization.
-
-
-
 
 
 % MULTILAYER POERCEPTRON
@@ -234,8 +233,8 @@ It was first proposed by Frank Rosenblat\footnote{Frank Rosenblat, psychologist 
     \end{minipage}
     \hspace{1em}
     \begin{minipage}{5cm}
-        The Neural Network is made by individual neurons called \textit{Perceptrons}. The neurons are split into input, weight and activation functions.\\
-        Nevertheless, the most important part of the neuron, and that determines significantly the capabilities of the neuron, is the activation function (which returns the output of the neuron).
+        The Neural Network is made by individual neurons called \textit{Perceptrons}. The neurons are split into input, weights and activation functions.\\
+        Nevertheless, the most important part of the neuron that determines significantly the capabilities of the neuron, is the activation function (which returns the output of the neuron).
     \end{minipage}
 \end{figure}\\
 The traditional activation function used in the Multilayer Perceptron is the Sigmoid: 
@@ -258,17 +257,18 @@ The Multilayer Perceptron Topology can be split into layers of three types:
     \end{minipage}
 \end{figure}\\
 \newpage
-
-
-
-
-
+\hspace{-1.6em}The training process uses the \textbf{BackPropagation}\footnote{The BackPropagation method and how it works can be consulted in the following \href{https://en.wikipedia.org/wiki/Backpropagation}{link}} method. 
+The requirements of \textit{backpropagation} are the \textit{learning rate} (a parameter that determines how much the network will be modified while applying the method) and the \textit{optimization method} (an algorithm to reduce the network's \textit{error function}\footnote{The error function is introduced and explained on page \pageref{whyworks}.}).\\ 
+The training process of neural networks is divided into \textit{epochs}, the number of iterations where \textit{backpropagation} is applied with a number of \textit{batches}. The \textit{batch} (or \textit{batch size}) is the number of samples used in every \textit{epoch}, and the \textit{mini batch} (or \textit{mini batch size}) is the number of samples used to apply the \textit{optimization method} (using this number of samples to create a mean modification of the parameters).\\ 
+In this study, the \textit{mini batch} will be 1 and the \textit{batch size} will be the number of samples; that is to say, every \textit{epoch} will apply \textit{backpropagation} for every sample.\\ 
+Moreover, the neural network will be implemented in \textbf{C language} to improve efficiency, with all methods (\textit{backpropagation}, \textit{optimization method}, \textit{error function}, etc.) developed by hand to ensure minimal computational cost.
 
 % WHY WORKS
-\subsection{Why Neural Networks works}
-It is important to remark that what gives us the capacity to model any system is that we can express every problem as a function (no matter if it is a classification task, probability function, prediction, or regression function).\\
+\subsection{Why Neural Networks work}
+\label{whyworks}
+It is important to remark that what gives us the capability to model any system is that we can express every problem as a function (no matter if it is a classification task, probability function, prediction, or regression function).\\
 The association between a task and a function allow us to apply the \textbf{Universal Approximation Theorem}.\\
-\rule{\linewidth}{0.4pt}\\
+\rule{\linewidth}{0.4pt}
 \begin{itemize}
     \item \textbf{Definition:} Universal Approximation Theorem.
 \end{itemize}  
@@ -281,30 +281,31 @@ The parameters $\{w_i, b_i, c_i\}$ are associated (respectively) with the weight
 Neural Networks essentially use this theorem with a limited number of sigmoids (equal to de number of neurons), consecuently an error of approximation is given.
 $$f(\vec{x})-\sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right) = \epsilon, k \in \mathbb{N}$$
 Modeling systems the information of the function shape/tendency is limited or none, making it only possible to study the problem using data values.\\
-This cases hare handle using the \textit{square-norm} metric (or \textit{Mean Squared Error}).\\
-\rule{\linewidth}{0.4pt}
+This cases are handle using the \textit{square-norm} metric (or \textit{Mean Squared Error}).\\
+\newpage
+\hspace{-1.6em}\rule{\linewidth}{0.4pt}
 \begin{itemize}
     \item \textbf{Definition:} Square-norm: 
 \end{itemize}
 Being $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ function followed by the system.
-Being $g:\mathbb{R}^n \rightarrow \mathbb{R}^m$, with $m,n\in\mathbb{N}$, as $g(\vec{x}) = \sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right)$.\\
+Being $g:\mathbb{R}^n \rightarrow \mathbb{R}^m$, with $m,n\in\mathbb{N}$, as $g(\vec{x}) = \sum_{i=0}^{k} c_i \sigma \left( w_i^T \cdot \vec{x} + b_i \right)$, $k\in\mathbb{N}$.\\
 Given a dataset $B = \{(\vec{x_i},\vec{y_i})\}_{i=0}^{N}$, with $N \in \mathbb{N}$, where $\forall (\vec{x_i},\vec{y_i}) \in B, \vec{y_i} = f(\vec{x_i})$.
 $$\Delta^2 = \frac{1}{N} \sum_{i=0}^{N} \left( \vec{y_i} - g(\vec{x_i}) \right)^2$$
 \rule{\linewidth}{0.4pt}\\\vspace{0.5em}
-Decreassing the error $\Delta$ implies reducing the error $\epsilon$ because as $\Delta$ decrease the model improves its approximation whereas $\epsilon$ decrease.\\
-As more neurons are added to the Network, the approximation and the training time increase. This increase in training time for the model in cases is not worth it as it represents a minimum improvement of the model.\\
-Moreover, the Backpropagation\footnote{The Backpropagation method is an algorithm to modify the internal parameters of a Neural network by using the chain rule, more information in the following \href{https://en.wikipedia.org/wiki/Backpropagation}{link}} method used to train Neural Networks have a complexity that increases the processing time exponentially to the number of neurons.\\
+Decreassing the error $\Delta$ implies reducing the error $\epsilon$ because as $\Delta$ decrease the model improves its approximation.\\
+As more neurons are added to the Network, the approximation and the training time increases. This increase in training time may not be worth as it can represent a minimum improvement of the model.\\
+Moreover, the Backpropagation\footnote{The Backpropagation method is an algorithm to modify the internal parameters of a Neural network by using the chain rule, more information in the following \href{https://en.wikipedia.org/wiki/Backpropagation}{link}.} method used to train Neural Networks have a complexity that increases the processing time exponentially to the number of neurons.\\
 Therefore, trying to obtain the ideal topology for solving a problem is a difficult task that in many cases resides in trial and error.
 
 \section{Neural Networks topology}
-The main objective of the study is to obtain a more efficient process using neural networks than the traditional ways that have been used at the time.\\
-Doing this requires, as has been explained before, a non-understood process to obtain an efficient neural network.\\
-Therefore, an observation has been done while approaching this problem that could partially solve that non-understand of what is doing the neural network and deduce the optimal architecture. 
-\subsection{Hypotesis and Proposal}
-As has been said before, when approaching this problem an intuitive idea appeared. \\
+The main objective of the study is to obtain a more efficient process using neural networks than the traditional ways that have been used to date.\\
+As it has been explained before, there is not an understanable process through which to obtain an efficient neural network.\\
+While approaching this problem, an idea that could partially solve the lack of understanding of what the neural network is doing, and deduce the optimal architecture, came to mind. 
+\subsection{Hypotesis and Working Hypothesis}
+As it has been said before, when approaching this problem an intuitive idea appeared. \\
 \rule{\linewidth}{0.4pt}
 \begin{itemize}
-    \item \textbf{Proposal:} If there is enough information about the system to model, there exists an efficient neural network in which architecture can be obtained using rules.
+    \item \textbf{Working Hypothesis:} If there is enough information about the system to model, there exists an efficient neural network whose architecture can be obtained using rules.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
 The idea proposed is influenced by the following observations:
@@ -315,27 +316,27 @@ The idea proposed is influenced by the following observations:
     \item All continuous functions can be approximated using the \textbf{Universal Approximation Theorem}.
 \end{enumerate}
 Moreover, if a function does not follow one of these types of functions, it can be split by more intervals until each of them can be approximated by one of these types or even can be approximated using \textit{Fourier Series} or \textit{Taylor series} allowing it to be modelled by periodical and polynomial functions.\\
-Therefore, this proposal can be verified by reducing it to corroborate the following points:
+Therefore, this Working Hypothesis can be verified by reducing it to corroborate the following points:
 \begin{enumerate}
-    \item Each category of functions mentioned can be modelled using a particular architecture of the neural network.
-    \item Exists a determined minimum number of data registers where the neural network can be trained.  
+    \item Each category of functions mentioned can be modelled using a particular architecture of a neural network.
+    \item There is a determined minimum number of data registers where the neural network can be trained.  
 \end{enumerate}
-To verify the proposal topological, efficiency and precision studies are required.
+To verify the Working Hypothesis, efficiency and precision studies are required.
 
-\newpage
-\subsection{Study of deterministic process}
-To start, let's assume the following axioms to simplify the study and give some feedback to make the correlations to verify or dismiss the proposal.
+\subsection{Study of deterministic processes}
+To start, let's assume the following axioms to simplify the study and give some feedback to make the correlations to verify or dismiss the Working Hypothesis.
 \begin{enumerate}
-    \item All periodic functions can be approximated as a combination of sinus functions.
-    \item All polynomial functions can be approximated as a combination of linear functions.
-    \item All irrational functions can be approximated as a combination of irrational functions.
-\end{enumerate}
+    \item All periodic functions can be approximated as a combination of $\sin$ functions.
+    \item All polynomial functions can be approximated as a combination of $x^n$ functions, where $n\in \{\mathbb{N} \cup \{0\}\}$.
+    \item All \underline{irrational functions}\footnote{In this study, \textit{irrational functions} define the functions that present an n-th root.} can be approximated as a combination of $\sqrt{x}$ function.
+\end{enumerate} 
 All points can be proven using \textit{Taylor Series} and \textit{Fourier Series}.
-Therefore, the study will be reduced to taking patterns of the architectures used to approximate the functions $\sin(x), \sqrt(x), x^2$.\\
-This paper uses $I-H-N-O$ nomenclature to represent the architecture of the neural network, where the letters $I,H,N,O$ represent the number of inputs, the hidden layers, the number of neurons for each hidden layer and the number of outputs respectively.
+The study will be reduced to taking patterns of the architectures used to approximate the functions $\sin{x}, \sqrt{x}, x^2$.\\
+This paper uses $I-H-N-O$ nomenclature to represent the architecture of the neural network, where the letters $I,H,N,O$ represent the number of inputs, the hidden layers, the number of neurons for each hidden layer and the number of outputs respectively.\\
+For instance, the architecture $1-3-4-1$ is a network with 1 input, 3 hidden layers with 4 neurons each one and 1 output.
 
 \subsubsection{Study of the \textit{sin} function}
-To test if there exists an architecture that can approximate efficiently the $\sin$ function in the real plane, will be studied to approximate the function in the interval $[0, 2\pi]$ using a fixed number of iterations with different architectures.    
+To test if there exists an architecture that can approximate efficiently the $\sin$ function in the real plane, the approximation of the function is studied in the interval $[0, 2\pi]$ using a fixed number of iterations with different architectures.
 \begin{figure}[h]
     \centering
     \subfloat[Model 1-1-1-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-1-1-1.png}}
@@ -359,13 +360,14 @@ To test if there exists an architecture that can approximate efficiently the $\s
     \label{fsin100}
 \end{figure}\\
 The results shown in Figure \ref{fsin100} were obtained 
-.by fixing 100 epochs and training using the stochastic gradient descent method with a learning rate of $0.1$ trying to minimize the \textit{Square-norm} error (\textit{MSE}).\\
-As can be seen in the Figure, almost all architectures do not approximate the $\sin$ function properly, despite the architectures \textit{1-2-2-1} and \textit{1-4-2-1}.\\
+by fixing 100 epochs and training the networks using the \textit{Stochastic Gradient Descent} method with a learning rate of $0.1$ trying to minimize the \textit{Square-norm} error (\textit{MSE}).\\
+\newpage
+\hspace{-1.6em}As can be seen in the Figure, almost all architectures do not approximate the $\sin$ function properly, not counting the architectures \textit{1-2-2-1} and \textit{1-4-2-1} which approximates the function relatively correctly.\\
 If the experiment is repeated changing the epoch number (instead of 100 change to 200) the results are almost similar (with more precision in some parts but no improvement of modelation).\\
-However, the architectures \textit{1-4-4-1} and \textit{1-4-2-1} give an augment of precision significantly important.
+However, the architectures \textit{1-4-4-1} and \textit{1-4-2-1} give an augment of precision significantly rellevant.
 \begin{figure}[h]
-    \subfloat[Model 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-2-1(200).png}}
-    \subfloat[MSE 1-2-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-2-1(200).png}}
+    \subfloat[Model 1-4-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-2-1(200).png}}
+    \subfloat[MSE 1-4-2-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-2-1(200).png}}
     \hspace{1em}
     \subfloat[Model 1-4-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-1-4-4-1(200).png}}
     \subfloat[MSE 1-4-4-1]{\includegraphics[width=0.24\linewidth]{img/sin/sin-loss-1-4-4-1(200).png}}
@@ -373,19 +375,19 @@ However, the architectures \textit{1-4-4-1} and \textit{1-4-2-1} give an augment
     \label{fsin200}
 \end{figure}\\
 The approximation done by these architectures is so significant that allows us to observe and conclude that the model that approximates the best the $\sin$ function is $1-2-4-1$.\\
-This conclusion is obtained because is the minimum architecture that can approximate the function, that can "learn"\footnote{Learn in this term refers as if the training process allows to reduce the loss (also named error) near 0 with a significant decrease throughout the epochs.}.\\
-Moreover, it can be an evidence of the following proposal:\\
+\newpage
+\hspace{-1.6em}The following conclusion is obtained because this is an architecture that efficiently approximates the function it aims to "learn"\footnote{Learn in this term refers as if the training process allows to reduce the loss (also named error) near 0 with a significant decrease throughout the epochs.}.\\
+Moreover, it can be an evidence of the following idea:\\
 \rule{\linewidth}{0.4pt}
 \begin{itemize}
-    \item \textbf{Proposal:} To approximate any periodical function in a real plane needs a minimum of 2 neurons in each of the $2\cdot K$ hidden layers, where $K$ is the sum of relatives extremes and point of inflexion of the function.
+    \item \textbf{Suggested Hypotesis:} To approximate any periodical function in a real plane a minimum of 2 neurons is needed in each of the $K$ hidden layers, where $K$ is the sum of the relative extremes and points of inflexion of the function.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
-This proposal is obtained by observing that every layer of the neural network is modelling one interval (delimited by the extremes of the function and inflexion points) and performing that approximation needs at least 2 sigmoids.
-
+This suggestion is obtained by the intuition and observation that every layer of the neural network could be modelling one interval (delimited by the extremes of the function and inflexion points) and performing that approximation seems to need at least 2 sigmoids.
 
 \subsubsection{Study of the \textit{parabolic} function}
-The same experiment has been done with the function $x^2$ (and also the $x^3$ to have more results to compare) with fixed epochs, learning rate and domain.\\
-Concretely, the values of epochs, learning rate and domain used are, respectively, $100$, $0.1$ and $[-2,2]$.\\
+The same experiment has been done with the function $x^2$ (also with function $x^3$ to have more results to compare) with fixed epochs, learning rate and domain.\\
+Specifically, the values of epochs, learning rate and domain used are, respectively, $100$, $0.1$ and $[-2,2]$.\\
 The results obtained for polynomial functions are shown in \ref{poli100}.
 \begin{figure}[h!]
     \centering
@@ -405,8 +407,8 @@ The results obtained for polynomial functions are shown in \ref{poli100}.
     \caption{Results of different architectures approximating the functions $x^2$ and $x^3$}
     \label{poli100}
 \end{figure}\\
-It shows how the most efficient architecture (which gives the better performance as modelling as precision) is the $1-2-1-1$.\\
-This architecture is similarly obtained before with the periodical functions but is not the same, which was one of the axioms proposed in the proposal.\\
+It shows how the most efficient architecture, which gives the better performance in modelling and precision, is the $1-2-1-1$.\\
+This architecture was tested before with the periodical functions but without possitive results. However, in this case is the best, which was one of the axioms proposed, each type of function has a diferent optimal architecture.\\
 Therefore, a last study will be done to obtain the architecture needed to model the irrational functions.
 \newpage
 
@@ -428,17 +430,18 @@ Finally, reproducing the experiment for the function $\sqrt{x}$, the results obt
     \caption{Results of different architectures approximating the function $\sqrt{x}$}
     \label{sqrt100}
 \end{figure}\\
-In this study, the only parameter that where changed with respect to the previous experiments was the domain (which was increased to the interval $[-4,4]$).\\
+In this study, the only parameter that was changed with respect to the previous experiments was the domain (which was increased to the interval $[-4,4]$).\\
 As it can be observed, the architecture that approximates the best the function is $1-3-1-1$.\\
-Moreover, comment that the intuition of the inclusion of irrational functions such as the $\sqrt{x}$ in the axioms of the proposal was made to use the property of having a function similar to $ReLU$\footnote{The \textit{ReLU} function is widely used as an activation function which is defined as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ x, x\geq 0\end{matrix} \right.$}.\\
-This inclusion of the function $\sqrt(x)$ in spite of the $ReLU$ was made thinking that was a better option and the least "forced" option of any other function that could give that similar property. However, this text between other similar functions was not made so could be interesting to expand this study by adding and experimenting with other functions.
+Furthermore, it should also be commented that the intuition of the inclusion of irrational functions such as the $\sqrt{x}$ in the axioms of the proposal was made to use the property of having a function similar to $ReLU$\footnote{The \textit{ReLU} function is widely used as an activation function which is defined as $f(x) = \left\{ \begin{matrix} 0, x < 0 \\ x, x\geq 0\end{matrix} \right.$}.\\
 
 \subsection{Viability of approximation discontinuous functions}
 It is important to keep in mind that splitting functions into domains can develop in discontinuities which do not allow the use of the \textbf{Universal Approximation Theorem}.\\
 Nevertheless, the application of neural networks in tasks such as classification or regression in many areas, with no information of the function that is approximating, using activation functions different from the \textit{sigmoid} that give (apparently) correct results give the idea that possibly the theorem could be expanded and (in some cases) have no need of the continuity restriction.\\
-\rule{\linewidth}{0.4pt}
+The widely use of $ReLU$ function in neural networks is because it is easier to program and with enough neurons, its effects (depite it should not be possible) give a similar or even better results.\\
+\newpage
+\hspace{-1.6em}\rule{\linewidth}{0.4pt}
 \begin{itemize}
-    \item \textbf{Proposal:} If a function has discontinuities different from asymptotic, the \textbf{Universal Approximation Theorem} can be used to give an approximation with error 0 when the number of sigmoid tends to infinity.
+    \item \textbf{Working Hypotesis:} If a function has discontinuities different from asymptotic, the \textbf{Universal Approximation Theorem} can be used to give an approximation with error 0 when the number of sigmoid tends to infinity.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
 This proposal can be sustained by the ability of sigmoid functions to approximate jump discontinuities. However, an experiment with discontinuous functions has been done to give evidence for this proposal.
@@ -460,7 +463,7 @@ The results of approximating the function in the interval $[0,3]$ are shown in \
 As can be seen in the figure \ref{disc}, using a limited model with enough number of epochs the approximation is quite acceptable. Therefore the use of \textit{sigmoid} functions in approximate split functions with jump discontinuities can be used at least in some cases.
 
 \subsubsection{Study of Asimptotyc discontinuity}
-However, the application of the \textbf{Universal Approximation Theorem} in discontinuities such as asymptotic can give problems that impossibilate the modelation using sigmoids.\\
+However, the application of the \textbf{Universal Approximation Theorem} in discontinuities such as asymptotic can cause problems that avert the modelation using sigmoids.\\
 Repeating the experiment done with the jump discontinuity function, but with a more powerful architecture, to approximate the function $\tan{x}$ in the interval $[-\frac{\pi}{2},\frac{\pi}{2}]$ give us an idea of this problem.\\
 The results obtained are shown in \ref{asymp}.
 \begin{figure}[h]
@@ -470,45 +473,49 @@ The results obtained are shown in \ref{asymp}.
     \caption{Architecture $1-5-5-1$ approximation to $\tan{x}$ function}
     \label{asymp}
 \end{figure}\\
-As can be observed the neural network is limited and cannot approximate properly the function. However, the use of other activation functions such as the $ReLU$ mentioned before can give a better performance.\\
-In the case of using the $ReLU$ function, it gives another problem that can be difficult to handle, the \textbf{Universal Approximation Theorem} does not ensure that the resulting function approximates with a limited error the system.\\
-Moreover, the use of the \textit{BackPropagation} method and its dependency with the \textit{Newtons Method} (the \textit{Steepest Gradient Descend}) to obtain zeros of the \textit{cost function} in the training process, does not ensure that the solution it arrives is the best or, even doe, if it is correct in all cases (and we can be blind in situations were the network was not tested).
+\newpage
+\hspace{-1.6em}As can be observed the neural network is limited and cannot approximate properly the function. However, the use of other activation functions such as the $ReLU$ mentioned before can give a better performance.\\
+In the case of using the $ReLU$ function, it gives another problem that can be difficult to handle, the \textbf{Universal Approximation Theorem} does not ensure that the resulting function approximates the system with a limited error.\\
+Moreover, the use of the \textit{BackPropagation} method and its dependency with the \textit{Newtons Method} (the \textit{Steepest Gradient Descend}) to obtain zeros of the \textit{cost function} in the training process, does not ensure that the solution it arrives is the best or, even though, if it is correct in all cases (and we can be blind in situations were the network was not tested).\\
 
 \subsection{Observations of the results}
-To sum up, all the results and conclusions obtained in the studies we can conclude if there is enough evidence for the proposal.\\
+To sum up, all the results and conclusions obtained in the studies we can conclude if there is enough evidence for the initial working hypothesis.\\
 \rule{\linewidth}{0.4pt}
 \begin{itemize}
-    \item \textbf{Proposal:} If there is enough information about the system to model, there exists an efficient neural network in which architecture can be obtained using rules.
+    \item \textbf{Working Hypothesis:} If there is enough information about the system to model,
+    there exists an efficient neural network whose architecture can be obtained using
+    rules.
 \end{itemize}
 \rule{\linewidth}{0.4pt}\\ \vspace{0.5em}
 To verify the viability of the proposal needed to accomplish the following conditions:
 \newpage
 \begin{enumerate}
-    \item \underline{All periodic functions can be approximated as a combination of sinus functions.}\\
+    \item \underline{All periodic functions can be approximated as a combination of $\sin$ functions.}\vspace{0.5em}\\
  The first condition can be proven using \textit{Fourier series}\\
- However, it is important to mention that a periodical function such as $\tan{x}$ can not be approximated due to the asymptotes. 
- Therefore, a periodical function can be modelled with $\sin$ functions because it requires that can have asymptotes.\\
-    \item \underline{All polynomial functions can be approximated as a combination of linear functions.}\\
- Such as the first condition, the second one can be proven using \textit{Taylor Series}, not having a possible counterpart that does not apply.\\
-    \item \underline{All irrational functions can be approximated as a combination of irrational functions.}\\
- Point 3 can be explained using the condition that we are trying to approximate a function in a certain interval. Therefore it can be obtained the following deduction:\\
+ However, it is important to mention that a periodical function such as $\tan{x}$ can not be approximated due to the asymptotes. \\
+    \item \underline{All polynomial functions can be approximated as a combination of $x^n$ functions,}\\
+    \underline{where $n\in \{\mathbb{N} \cup \{0\}\}$}.\vspace{0.5em}\\
+ Such as the first condition, the second one can be proven using \textit{Taylor Series}, not having any inconvinient.\\
+    \item \underline{All irrational functions can be approximated as a combination of the irrational}\\
+    \underline{functions $\sqrt{x}$}.\vspace{0.5em}\\
+ Point 3 can be explained by trying to approximate a function in a certain interval. Therefore it can be obtained the following deduction:\\
     \rule{\linewidth}{0.4pt}
     \begin{itemize}
-        \item \textbf{Deduction:} Approximation of irration functions.\\
+        \item \textbf{Deduction:} Approximation of irrational functions.\\
  Being $f_n:\mathbb{R}\rightarrow\mathbb{R}$, $g:\mathbb{R}\rightarrow\mathbb{R}$ where $f_n(x) = \sqrt[n]{x}, \forall n \in \mathbb{N} / n > 1$ and $g(x) = \sqrt{x}$.\\
         $$ \exists c,d \in \mathbb{R} / \forall x \in [a,b], f_n(x)- g(c\cdot x + d) < \epsilon$$ 
  Where $\epsilon\in\mathbb{R^+}$ is the error and $\{ c,d \}$ are parameters that ajust $g$ to approximate $f_n$ in the interval $[a,b]\cup \mathbb{R}$.
     \end{itemize}
     \rule{\linewidth}{0.4pt}\\
- Nevertheless, mention that when $n$ (the degree of the root) is even the interval needs to be in the set $\mathbb{R^+}$. Moreover, this deduction can handle situations when the set of functions $f_n$ are defined as $f(x)_n = \alpha \sqrt[n]{x} + \beta$ where the parameters $\alpha,\beta \in \mathbb{R}$ \\
+ Nevertheless, mention that when $n$ (the degree of the root) is even the interval needs to be in the set $\mathbb{R^+}$. Moreover, this deduction can handle situations where the set of functions $f_n$ are defined as $f_n(x) = \alpha \sqrt[n]{x} + \beta$ where the parameters $\alpha,\beta \in \mathbb{R}$ \\
  This deduction can also be demonstrated using tangency:\\
     \rule{\linewidth}{0.4pt}
     \begin{itemize}
-        \item \textbf{Demostration:} Approximation of irration functions.\\
+        \item \textbf{Demostration:} Approximation of irrational functions.\\
  Being $f_n:\mathbb{R}\rightarrow\mathbb{R}$, $g:\mathbb{R}\rightarrow\mathbb{R}$ where $f_n(x) = \sqrt[n]{x}, \forall n \in \mathbb{N} / n > 1$ and $g(x) = \sqrt{x}$.\\
- Being $P=(p_0, p_1) / p_0 = \frac{a+b}{2}, p_1 = f_n(p_0)$, $\exists c,d\in\mathbb{R} / g(c\cdot p_0 + d) = p_1$.
+ Being $P=(p_0, p_1)\in[a,b]\subset \mathbb{R} / p_0 = \frac{a+b}{2}, p_1 = f_n(p_0)$, \\$\exists c,d\in\mathbb{R} / g(c\cdot p_0 + d) = p_1$.
  Therefore, 
-        $$\exists (\alpha, \beta) \subset [a,b] / p_0 = \frac{\alpha + \beta}{2} \text{ where } \forall x \in (\alpha, \beta), f_n(x) - g(c\cdot x + d) < \epsilon$$
+        $$\exists (\alpha, \beta) \subset [a,b] / p_0 = \frac{\alpha + \beta}{2} \text{ where } \forall x \in (\alpha, \beta), |f_n(x) - g(c\cdot x + d)| < \epsilon$$
         $\epsilon\in\mathbb{R^+}$ the error.
     \end{itemize}
     \rule{\linewidth}{0.4pt}\\
@@ -516,20 +523,21 @@ To verify the viability of the proposal needed to accomplish the following condi
 \end{enumerate}
 \begin{enumerate}
     \setcounter{enumi}{3}
-    \item \underline{The mentioned functions can be modelled using a particular architecture.}\\
- The studies about the different architectures of the different functions ($x^2, \sin{x}, \sqrt{x}$) show that there exists a differentiable minimum architecture that approximates the best of each function.\\
-    \item \underline{Exists a determined minimum number of data to train the neural network.}\\
- That point is controversial. In all the studies the number of data available where different with at least $200$ registers. However, the relevant part about this is that it really needs a deterministic process that generates the dataset.\\
- The minimal information that is required is the deterministic process intrinsically. If there is no deterministic process the information needed will not be enough despite how many it could recap.\\
- This is the consequence of the backpropagation method and its dependency in the \textit{Steepest Gradient Descend}. If there is no "correct" model to compare and interpret the functionality of the network it is not possible to "extract theoretically the best architecture".\\
+    \item \underline{The mentioned functions can be modelled using a particular minimal and}\\
+    \underline{distinguishable architecture.}\vspace{0.5em}\\
+ The studies about the different architectures of the different functions ($x^2, \sin{x}, \sqrt{x}$) show that there exists a distinguishable minimum architecture that approximates the best of each function.\\
+    \item \underline{There is a determined minimum number of data to train the neural network.}\vspace{0.5em}\\
+ That point is controversial. In all the studies the number of data available were different with at least $600$ registers. However, the relevant part about this is that it really needs a deterministic process that generates the dataset.\\
+ The minimal information that is required is the deterministic process intrinsically. If there is no deterministic process the information needed will not be enough despite how many data it could recap.\\
+ This is the consequence of the \textit{backpropagation} method and its dependency in the \textit{Steepest Gradient Descend}. If there is no "correct" model to compare and interpret the functionality of the network it is not possible to "extract theoretically the best architecture".\\
  Hence, there is no "minimum number of samples" despite there is necessary existence of a (deterministic) \textit{non-black box}\footnote{A \textit{black box} model is a process where the internal operations and functionality of it can not be interpreted partially or at all, giving the aspect of being a non-undertanable or/and verified model.} method.
 \end{enumerate}
 Concluding the observations, the studies give enough evidence of the proposal.\\
 To give more evidence of that proof, an experimental process will be done to extract the best minimal architecture that approximates a deterministic process.\\
-Moreover, an efficiency test will be also performed to ensure that neural networks in collaboration with the information that gives the deterministic process improve the computation time it needs.
+Moreover, an efficiency test will be also performed to ensure that neural networks in collaboration with the information that gives the deterministic process improve the computation time needed.
 
 \section{Arabic to Roman numbers}
-The idea about that topic is the following, any natural number (normally written in the Arabic form) can be expressed as a Roman number. This process is a sequence of fixed rules that repeated steeps give the result (it is a deterministic process).\\
+The idea about that topic is the following: any natural number (normally written in the Arabic form) can be expressed as a Roman number. This process is a sequence of fixed rules that if you follow them, give you the result (it is a deterministic process).\\
 As is a deterministic function ensures the existence of a function that models the process, but this function is unknown.\\
 The main objective is, with the observation and the proposal done before, to create a neural network that approximates this unknown function.
 
